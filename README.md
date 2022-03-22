@@ -1,4 +1,4 @@
-# eFaisla
+## eFaisla
 The Department of Justice has launched this easy-to-use platform for the simple and fast retrieval of previously judged cases also helps them provide justice with the help of technological advancements in the field of Artificial Intelligence.<br/>
 
 We have acquired quite a bit of accuracy via our technology, but we always trust that human precision is irreplaceable. So we’ve also integrated a recommendation system that gives the user, the liberty to choose, whether to accept the decision or opt for similar references.<br/>
