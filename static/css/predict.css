@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+    --mainColor: #64bcf4;
+    --hoverColor: #5bacdf;
+    --backgroundColor: #f1f8fc;
+    --darkOne: #312f3a;
+    --darkTwo: #45424b;
+    --lightOne: #919191;
+    --lightTwo: #aaa;
+}
+
+body{
+    background-color: var(--backgroundColor);
+    font-family: "Poppins", sans-serif;
+}
+
+/* Nav  */
+
+nav{
+    height: 80px;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dashboard-logo,
+.dashboard-profile{
+    display: flex;
+    align-items: center;
+}
+
+.dashboard-logo h3{
+    color: var(--darkTwo);
+    font-size: 1.55rem;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-left: 0.6rem;
+    margin-top: 0.6rem;
+}
+
+.dashboard-profile img,
+.dashboard-logo img{
+    height: 40px;
+    width: 40px;
+}
+
+/* Main  */
+
+.predict-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.predict-content{
+    width: 60%;
+}
+
+.predict-upload{
+    width: 50%;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+}
+
+.predict-upload form{
+    width: 100%;
+}
+
+
+input[type="file"]{
+    border: 2px solid var(--lightOne);
+    width: 70%;
+}
+
+input[type="file"]::file-selector-button{
+    padding: 0.9rem;
+    border: none;
+    outline: none;
+    background-color: #d4d4d4;
+    border-right: 2px solid var(--lightOne);
+}
+
+.predict-btn{
+    background-color: var(--mainColor);
+    border: none;
+    outline: none;
+    padding: 0.9rem 1.9rem;
+    border-radius: 30px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    margin-left: 2rem;
+}
+
+.predict-btn:hover{
+    background-color: var(--hoverColor);
+}
+
+.predict-preview{
+    border: 2px solid red;
+    padding: 4rem;
+}
