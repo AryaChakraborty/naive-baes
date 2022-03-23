@@ -1,14 +1,9 @@
 const express = require("express");
 const Router = express.Router();
 const user = require("../model/user");
-
 Router.route("/login")
-    .get(async(req,res)=>{
-        res.json(
-            {
-                msg: "Login route working"
-            }
-        )
+    .get(async (req, res) => {
+        res.status(200).render("login.pug");
     })
     .post(async (req, res) => {
         try {
@@ -17,38 +12,29 @@ Router.route("/login")
             const password = req.body.password;
 
             const userData = await user.findOne({ licenseID });
+            const passwordDB = userData?.password;
 
-            if( userData == null){
-                return res.json(
+            if (userData == null) {
+                res.status(401).json(
                     {
-                        msg: "password is null"
+                        msg: "Invalid LicenseID"
                     }
-                )                
+                );
             }
-            const passwordDB = userData.password;
 
-            if (password=== passwordDB) {
-                res.json(
+            if ( password !== passwordDB){
+                res.status(401).json(
                     {
-                        msg: "Password matched !. Redirect to dashboard"
+                        msg: "Invalid Credentials"
                     }
-                )
+                );
             }
             else {
-                res.json(
-                    {
-                        msg: "Invalid Credentials !. Redirect to login page"
-                    }
-                )
+                res.status(200).send("Welcome to dashboard");
             }
         }
         catch (err) {
-            console.log(err);
-            res.json(
-                {
-                    msg:err
-                }
-            )
+            console.log(err);            
         }
     })
 
