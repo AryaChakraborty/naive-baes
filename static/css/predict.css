@@ -53,6 +53,26 @@ nav{
     width: 40px;
 }
 
+
+.profile-hover{
+    background-color: var(--lightTwo);
+    font-size: 12px;
+    padding: 0.2rem;
+    border: 1px solid black;
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    display: none;
+}
+
+.off{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
 /* Main  */
 
 .predict-main{
