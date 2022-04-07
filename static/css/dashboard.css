@@ -53,7 +53,24 @@ nav{
     width: 40px;
 }
 
+.profile-hover{
+    background-color: var(--lightTwo);
+    font-size: 12px;
+    padding: 0.2rem;
+    border: 1px solid black;
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    display: none;
+}
 
+.off{
+    display: none;
+}
+
+.show{
+    display: block;
+}
 /* Main  */
 
 .dashboard-main{
@@ -77,6 +94,27 @@ nav{
 .dashboard-main h2{
     margin-top: 2rem;
     margin-bottom: 2rem;
+}
+
+.dashboard-main form {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+#submitBtn{
+    padding: 1rem;
+    margin-left: 1rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background-color: var(--mainColor);
+    border-radius: 30px;
+}
+
+#submitBtn:hover{
+    background-color: var(--hoverColor);
 }
 
 .dashboard-content{

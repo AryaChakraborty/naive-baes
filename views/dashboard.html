@@ -20,11 +20,15 @@
                 <a href="">
                     <img class="profile-img" src="../static/images/avataaars.png" alt="">
                 </a>
+                <div class="profile-hover">View Profile</div>
             </div>
         </nav>
         <section class="dashboard-main">
-            <input class="dashboard-search" type="search" name="case-search" id="caseSearch"
-                placeholder="Search for keywords...">
+            <form action="" name="caseForm" >
+                <input class="dashboard-search" type="search" name="case-search" id="caseSearch"
+                    placeholder="Search for keywords...">
+                <input type="submit" value="🔍" id="submitBtn">
+            </form>
             <h2 class="dashboard-header">Judgment Accelerated !</h2>
             <div class="dashboard-content">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam accusantium, culpa, iure quidem
@@ -53,5 +57,27 @@
         <footer>Home page er footer ta ekhane copy kore dish Rupam</footer>
     </div>
 </body>
+<script>
+    const profileHover = document.querySelector(".profile-hover");
+    const profileImage = document.querySelector(".profile-img");
+    const caseSearch = document.getElementById("caseSearch");
+    const form = document.forms["caseForm"];
+
+
+    profileImage.addEventListener("mouseover",()=>{
+        profileHover.classList.remove("off");
+        profileHover.classList.add("show");
+    })
+
+    profileImage.addEventListener("mouseout",()=>{
+        profileHover.classList.remove("show");
+        profileHover.classList.add("off");
+    })
+
+    form.addEventListener("submit",(event)=>{
+        event.preventDefault();
+        console.log(caseSearch.value);
+    })
+</script>
 
 </html>
