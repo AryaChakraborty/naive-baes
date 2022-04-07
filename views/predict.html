@@ -18,6 +18,7 @@
                 <a href="">
                     <img class="profile-img" src="../static/images/avataaars.png" alt="">
                 </a>
+                <div class="profile-hover">View Profile</div>
             </div>
         </nav>
         <section class="predict-main">
@@ -38,4 +39,18 @@
         <footer>Footer</footer>
     </div>
 </body>
+<script>
+    const profileHover = document.querySelector(".profile-hover");
+    const profileImage = document.querySelector(".profile-img");
+
+    profileImage.addEventListener("mouseover",()=>{
+        profileHover.classList.remove("off");
+        profileHover.classList.add("show");
+    })
+
+    profileImage.addEventListener("mouseout",()=>{
+        profileHover.classList.remove("show");
+        profileHover.classList.add("off");
+    })
+</script>
 </html>
