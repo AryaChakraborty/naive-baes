@@ -96,6 +96,27 @@ nav{
     margin-bottom: 2rem;
 }
 
+.dashboard-main form {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+#submitBtn{
+    padding: 1rem;
+    margin-left: 1rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background-color: var(--mainColor);
+    border-radius: 30px;
+}
+
+#submitBtn:hover{
+    background-color: var(--hoverColor);
+}
+
 .dashboard-content{
     width: 60%;
 }
