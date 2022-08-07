@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="../../../static/css/partials/user/navbar.css">
+    <!-- Font awesome cdn  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <div class="dashboard-logo">
+            <img class="logo-img" src="../../../static/images/landing-page/Logo.png" alt="">
+            <h3>Judgment Finder</h3>
+        </div>
+        <div class="dashboard-profile">
+            <a href="/user/profile">
+                <img class="profile-img" src="../../../static/images/avataaars.png" alt="">
+            </a>
+            <div class="profile-hover">View Profile</div>
+        </div>
+    </nav>
+</body>
+<script>
+    const profileHover = document.querySelector(".profile-hover");
+    const profileImage = document.querySelector(".profile-img");
+    const caseSearch = document.getElementById("caseSearch");
+    const form = document.forms["caseForm"];
+
+
+    profileImage.addEventListener("mouseover", () => {
+        profileHover.classList.remove("off");
+        profileHover.classList.add("show");
+    })
+
+    profileImage.addEventListener("mouseout", () => {
+        profileHover.classList.remove("show");
+        profileHover.classList.add("off");
+    })
+
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        // console.log(caseSearch.value);
+    })
+</script>
+
+</html>
