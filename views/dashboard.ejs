@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/dashboard.css">
+    <title>Dashboard</title>
+    <!-- Font awesome cdn  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <%- include('../views/partials/user/navbar.ejs') %>
+            <section class="dashboard-main">
+                <form action="/keywordSearch" name="caseForm" method="POST">
+                    <input class="dashboard-search" type="search" name="case-search" id="caseSearch"
+                        placeholder="Search for keywords...">
+                    <input type="submit" value="🔍" id="submitBtn">
+                </form>
+                <h2 class="dashboard-header">Judgment Accelerated !</h2>
+                <div class="dashboard-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam accusantium, culpa, iure quidem
+                    soluta magni vel eum ullam, voluptatibus necessitatibus odit esse suscipit excepturi
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam accusantium, culpa, iure quidem
+                    soluta magni vel eum ullam, voluptatibus necessitatibus odit esse suscipit excepturi
+                </div>
+                <br>
+                <div class="cta-box">
+                    <div class="predict-box">
+                        <button class="predict-btn cta-btn">
+                            <i class="fa fa-brain"></i>
+                            <a href="/user/predict">Predict</a>                            
+                        </button>
+                        <div class="predict-video cta-video"> Predict Video</div>
+                    </div>
+                    <div class="submit-box">
+                        <button class="submit-btn cta-btn">
+                            <i class="fa fa-gavel"></i>
+                            <a href="/user/submit">Submit</a>                            
+                        </button>
+                        <div class="submit-video cta-video">Submit Video</div>
+                    </div>
+                </div>
+            </section>
+            <footer>Footer</footer>
+    </div>
+</body>
+
+
+</html>
