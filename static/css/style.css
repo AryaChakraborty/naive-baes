@@ -163,6 +163,7 @@ header .container {
   transform: translateY(8px);
 }
 
+
 .big-wrapper.active .hamburger-menu .bar {
   background-color: transparent;
 }
@@ -173,7 +174,7 @@ header .container {
 
 .big-wrapper.active .bar::after {
   transform: translateY(0) rotate(45deg);
-}
+} 
 
 .showcase-area .container {
   display: grid;
@@ -305,6 +306,7 @@ header .container {
 .footer-links{
   color: rgb(0, 0, 0);
 }
+
 @keyframes appear {
   0% {
     clip-path: circle(30% at -25% -25%);

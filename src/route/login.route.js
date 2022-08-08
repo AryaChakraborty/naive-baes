@@ -3,7 +3,7 @@ const Router = express.Router();
 const user = require("../model/user");
 Router.route("/login")
     .get(async (req, res) => {
-        res.status(200).render("login.pug");
+        res.status(200).render("login.ejs");
     })
     .post(async (req, res) => {
         try {
@@ -30,7 +30,7 @@ Router.route("/login")
                 );
             }
             else {
-                res.status(200).send("Welcome to dashboard");
+                res.status(200).redirect("/user/dashboard");
             }
         }
         catch (err) {

@@ -12,23 +12,32 @@ app.use(urlencoded({ extended: false }));
 app.use("/static", express.static(static_path));
 
 
-app.set("view engine", "pug");
+app.set("view engine", "ejs");
 app.set("views", views_path);
 
 //* Home page 
-app.get("/home",async(req,res)=>{
-    // Home page will render here
-    res.status(200).render("index.pug");
+app.get("/",async(req,res)=>{
+    res.status(200).render("index.ejs");
 })
 
-//* Routes 
 
-const loginRouter = require("../src/route/login_route");
-app.use("/home",loginRouter);
+//* Home Routes 
 
-const predictRouter = require("./route/predict_route");
-app.use("/home",predictRouter);
+const loginRouter = require("./route/login.route");
+app.use("/",loginRouter);
 
+//* User Routes
+
+const dashboardRouter = require("./route/dashboard.route");
+app.use("/user",dashboardRouter);
+
+const profileRouter = require("./route/profile.route");
+app.use("/user",profileRouter);
+
+const predictRouter = require("./route/predict.route");
+app.use("/user",predictRouter);
+
+//* Listen
 app.listen(port, () => {
     console.log(`The application started successfully on port ${port}`);
 })

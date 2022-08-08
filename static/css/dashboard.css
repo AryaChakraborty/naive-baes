@@ -23,54 +23,6 @@ body{
     font-family: "Poppins", sans-serif;
 }
 
-/* Nav  */
-
-nav{
-    height: 80px;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-}
-
-.dashboard-logo,
-.dashboard-profile{
-    display: flex;
-    align-items: center;
-}
-
-.dashboard-logo h3{
-    color: var(--darkTwo);
-    font-size: 1.55rem;
-    line-height: 1.2;
-    font-weight: 700;
-    margin-left: 0.6rem;
-    margin-top: 0.6rem;
-}
-
-.dashboard-profile img,
-.dashboard-logo img{
-    height: 40px;
-    width: 40px;
-}
-
-.profile-hover{
-    background-color: var(--lightTwo);
-    font-size: 12px;
-    padding: 0.2rem;
-    border: 1px solid black;
-    position: absolute;
-    top: 4rem;
-    right: 0;
-    display: none;
-}
-
-.off{
-    display: none;
-}
-
-.show{
-    display: block;
-}
 /* Main  */
 
 .dashboard-main{
@@ -172,6 +124,11 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Footer  */
