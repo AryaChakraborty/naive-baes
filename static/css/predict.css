@@ -40,7 +40,6 @@ body{
 
 .predict-upload{
     width: 50%;
-    /* border: 2px solid red; */
     display: flex;
     justify-content: center;
 }
@@ -79,9 +78,4 @@ input[type="file"]::file-selector-button{
 
 .predict-btn:hover{
     background-color: var(--hoverColor);
-}
-
-.predict-preview{
-    border: 2px solid red;
-    padding: 4rem;
 }
