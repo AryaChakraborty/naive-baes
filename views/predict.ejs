@@ -9,44 +9,41 @@
     <title>Predict</title>
     <!-- Font awesome cdn  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Filepond cdn  -->
+    <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
+    <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
 </head>
 
 <body>
     <div class="predict-container">
         <%- include('../views/partials/user/navbar.ejs') %>
-        <section class="predict-main">
-            <h2>Header</h2> <br><br>
-            <div class="predict-content">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quas voluptatibus ducimus rem est
-                asperiores voluptates doloribus? Et velit asperiores corporis voluptas odit obcaecati voluptatibus omnis
-                odio suscipit. Quod dolor facere illum labore fugit.
-            </div><br><br>
-            <div class="predict-upload">
-                <form action="/user/predict" name="predict-form" method="POST">
-                    <input type="file" name="predict" id="predict">
-                    <input type="submit" value="Predict" class="predict-btn">
-                </form>
-            </div> <br>
-            <div class="predict-preview">
-                Preview
-            </div>
-        </section>
-        <footer>Footer</footer>
+            <section class="predict-main">
+                <h2>Header</h2> <br><br>
+                <div class="predict-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quas voluptatibus ducimus rem est
+                    asperiores voluptates doloribus? Et velit asperiores corporis voluptas odit obcaecati voluptatibus
+                    omnis
+                    odio suscipit. Quod dolor facere illum labore fugit.
+                </div><br><br>
+                <div class="predict-upload">
+                    <form action="/user/predict" name="predict-form" method="POST">
+                        <input type="file" name="predict" id="predict" multiple="multiple"  accept="image/*">
+                        <input type="submit" value="Predict" class="predict-btn">
+                    </form>
+                </div> <br>
+                <div class="predict-preview">
+
+                </div>
+            </section>
+            <footer>Footer</footer>
     </div>
 </body>
+<script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+<script src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
+<script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+<!-- <script src="../static/js/predict.js"></script> -->
 <script>
-    const profileHover = document.querySelector(".profile-hover");
-    const profileImage = document.querySelector(".profile-img");
-
-    profileImage.addEventListener("mouseover", () => {
-        profileHover.classList.remove("off");
-        profileHover.classList.add("show");
-    })
-
-    profileImage.addEventListener("mouseout", () => {
-        profileHover.classList.remove("show");
-        profileHover.classList.add("off");
-    })
+   
 </script>
 
 </html>
