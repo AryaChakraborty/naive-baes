@@ -28,8 +28,6 @@
 <script>
     const profileHover = document.querySelector(".profile-hover");
     const profileImage = document.querySelector(".profile-img");
-    const caseSearch = document.getElementById("caseSearch");
-    const form = document.forms["caseForm"];
 
 
     profileImage.addEventListener("mouseover", () => {
@@ -42,10 +40,6 @@
         profileHover.classList.add("off");
     })
 
-    form.addEventListener("submit", (event) => {
-        event.preventDefault();
-        // console.log(caseSearch.value);
-    })
 </script>
 
 </html>
