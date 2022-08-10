@@ -7,6 +7,14 @@ const predictionSchema = new mongoose.Schema({
         required: true,
         unique: true
     },
+    createdAt: {
+        type: Date,
+        default : Date.now
+    },
+    updatedAt: {
+        type: Date,
+        default : Date.now 
+    },
     crimeDate: {
         type: Date
     },
@@ -32,6 +40,11 @@ const predictionSchema = new mongoose.Schema({
     punishment: {
         type: String
     }
+});
+
+predictionSchema.pre('save', function preSave(next) {
+    this.updatedAt(Date.now());
+    next();
 });
 
 const Prediction = new mongoose.model("Prediction", predictionSchema);
