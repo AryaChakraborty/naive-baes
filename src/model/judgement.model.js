@@ -43,7 +43,7 @@ const judgementSchema = new mongoose.Schema({
 });
 
 judgementSchema.pre('save', function preSave(next) {
-    var schema = this;
+    let schema = this;
     schema.updatedAt(Date.now());
     next();
 });

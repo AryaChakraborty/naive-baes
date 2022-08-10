@@ -43,7 +43,7 @@ const predictionSchema = new mongoose.Schema({
 });
 
 predictionSchema.pre('save', function preSave(next) {
-    var schema = this;
+    let schema = this;
     schema.updatedAt(Date.now());
     next();
 });
