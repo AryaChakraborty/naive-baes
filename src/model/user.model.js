@@ -1,17 +1,33 @@
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
-    
+
+    licenseID: {
+        type: String,
+        required: true,
+        unique: true
+    },
     password: {
         type: String,
         required: true,
         unique: true
 
     },
-    licenseID: {
+    fullName: {
         type: String,
-        required: true,
-        unique: true
+        uppercase: true
+    },
+    email: {
+        type: String,
+    },
+    phoneNumber: {
+        type: String,
+    },
+    position: {
+        type: String,
+    },
+    image: {
+        type: String,
     }
 });
 
