@@ -20,6 +20,11 @@ app.get("/",async(req,res)=>{
     res.status(200).render("index.ejs");
 })
 
+//* About page 
+app.get("/about",async(req,res)=>{
+    res.status(200).render("about.ejs");
+})
+
 
 //* Home Routes 
 
