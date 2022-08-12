@@ -78,10 +78,11 @@ body {
         font-size: 18px;
         
     }
+    .about-row{
+        padding: 48px;
+    }
 }
-/* .container{
-    background-color: #f1f8fc;
-} */
+
 .team-container
 {
     width:100%;
