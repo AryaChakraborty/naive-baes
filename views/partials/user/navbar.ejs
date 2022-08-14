@@ -8,7 +8,7 @@
     <title></title>
     <link rel="stylesheet" href="../../../static/css/partials/user/navbar.css">
     <!-- Font awesome cdn  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -17,28 +17,56 @@
             <img class="logo-img" src="../../../static/images/landing-page/Logo.png" alt="">
             <h3>Judgment Finder</h3>
         </div>
-        <div class="dashboard-profile">
-            <a href="/user/profile">
-                <img class="profile-img" src="../../../static/images/avataaars.png" alt="">
-            </a>
-            <div class="profile-hover">View Profile</div>
+        <div class="dropdown">
+            <div class="dashboard-profile">
+                <a>
+                    <img class="profile-img dropbtn" src="../../../static/images/avataaars.png" alt="" onclick="dropDownFunction()">
+                </a>
+                <!-- View profile hover  -->
+                <!-- <div class="profile-hover">View Profile</div> -->
+            </div>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="/user/dashboard">Dashboard</a>
+                <a href="/user/profile">View Profile</a>
+                <a href="/user/favourites">Favourites</a>
+                <a href="/user/editSubmission">Edit Previous Submission</a>
+                <a href="/user/viewPrediction">View Previous Predictions</a>
+                <a href="/user/logout">Logout</a>
+            </div>
         </div>
     </nav>
 </body>
 <script>
-    const profileHover = document.querySelector(".profile-hover");
-    const profileImage = document.querySelector(".profile-img");
+    // const profileHover = document.querySelector(".profile-hover");
+    // const profileImage = document.querySelector(".profile-img");
 
 
-    profileImage.addEventListener("mouseover", () => {
-        profileHover.classList.remove("off");
-        profileHover.classList.add("show");
-    })
+    // profileImage.addEventListener("mouseover", () => {
+    //     profileHover.classList.remove("off");
+    //     profileHover.classList.add("show");
+    // })
 
-    profileImage.addEventListener("mouseout", () => {
-        profileHover.classList.remove("show");
-        profileHover.classList.add("off");
-    })
+    // profileImage.addEventListener("mouseout", () => {
+    //     profileHover.classList.remove("show");
+    //     profileHover.classList.add("off");
+    // })
+
+    function dropDownFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    window.onclick = function (event) {
+        if (!event.target.matches('.dropbtn')) {
+            let dropdowns = document.getElementsByClassName("dropdown-content");
+            let i;
+            for (i = 0; i < dropdowns.length; i++) {
+                let openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
 
 </script>
 
