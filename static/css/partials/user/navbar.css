@@ -32,19 +32,32 @@ nav {
     justify-content: space-between;
 }
 
+.container {
+    max-width: 81rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .dashboard-logo,
 .dashboard-profile {
     display: flex;
     align-items: center;
 }
-
+.dashboard-logo{
+    cursor: pointer;
+}
 .dashboard-logo h3 {
     color: var(--darkTwo);
     font-size: 1.55rem;
     line-height: 1.2;
     font-weight: 700;
     margin-left: 0.6rem;
-    margin-top: 0.6rem;
 }
 
 .dashboard-profile img,
@@ -86,19 +99,22 @@ nav {
     position: absolute;
     right: 0px;
     background-color: #f1f1f1;
-    min-width: 160px;
+    padding: 0px 15px;
+    min-width: 300px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    border-radius: 3px;
 
 }
 
 .dropdown-content a {
-    color: black;
+    color: #636363;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.815);
+    border-bottom: 1px solid #aeaeae;
+    transition: all 0.3s ease 0s;
 }
 
 .dropdown-content a:last-child{
@@ -106,7 +122,8 @@ nav {
 }
 
 .dropdown-content a:hover {
-    background-color: #ddd;
+    color: black;
+    font-weight: bold;
 }
 
 .off {
@@ -115,4 +132,10 @@ nav {
 
 .show {
     display: block;
+}
+
+@media screen and (max-width: 870px) {
+    .dashboard-logo h3 {
+        font-size: 1.25rem;
+    }
 }

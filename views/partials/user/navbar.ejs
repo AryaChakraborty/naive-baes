@@ -8,30 +8,35 @@
     <title></title>
     <link rel="stylesheet" href="../../../static/css/partials/user/navbar.css">
     <!-- Font awesome cdn  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <nav>
-        <div class="dashboard-logo">
-            <img class="logo-img" src="../../../static/images/landing-page/Logo.png" alt="">
-            <h3>Judgment Finder</h3>
-        </div>
-        <div class="dropdown">
-            <div class="dashboard-profile">
-                <a>
-                    <img class="profile-img dropbtn" src="../../../static/images/avataaars.png" alt="" onclick="dropDownFunction()">
-                </a>
-                <!-- View profile hover  -->
-                <!-- <div class="profile-hover">View Profile</div> -->
+        <div class="container">
+            <div class="dashboard-logo">
+                <img class="logo-img" src="../../../static/images/landing-page/Logo.png" alt="">
+                <h3>Judgment Finder</h3>
             </div>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="/user/dashboard">Dashboard</a>
-                <a href="/user/profile">View Profile</a>
-                <a href="/user/favourites">Favourites</a>
-                <a href="/user/editSubmission">Edit Previous Submission</a>
-                <a href="/user/viewPrediction">View Previous Predictions</a>
-                <a href="/user/logout">Logout</a>
+            <div class="dropdown">
+                <div class="dashboard-profile">
+                    <a>
+                        <img class="profile-img dropbtn" src="../../../static/images/avataaars.png" alt=""
+                            onclick="dropDownFunction()">
+                    </a>
+                    <!-- View profile hover  -->
+                    <!-- <div class="profile-hover">View Profile</div> -->
+                </div>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="/user/dashboard"><i class="fa-solid fa-house"></i>&nbspDashboard</a>
+                    <a href="/user/profile"><i class="fa-solid fa-user"></i>&nbspView Profile</a>
+                    <a href="/user/favourites"><i class="fa-solid fa-bookmark"></i>&nbspFavourites</a>
+                    <a href="/user/editSubmission"><i class="fa-solid fa-pen-to-square"></i>&nbspEdit Previous Submission</a>
+                    <a href="/user/viewPrediction"><i class="fa-solid fa-eye"></i>&nbspView Previous Predictions</a>
+                    <a href="/user/logout"><i class="fa-solid fa-arrow-right-from-bracket"></i>&nbspLogout</a>
+                </div>
             </div>
         </div>
     </nav>
