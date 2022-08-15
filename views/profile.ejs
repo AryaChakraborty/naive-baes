@@ -6,12 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
     <link rel="stylesheet" href="../static/css/profile.css">
+    <!-- Font awesome cdn  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <div class="profile-container">
         <%- include('../views/partials/user/navbar.ejs') %>
         <section class="profile-section">
-            profile section
+            <div class="profile-heading">
+                <h1>My profile</h1>
+            </div>
+            <div class="profile-photo-container">
+                <div class="profile-photo-wrapper">
+                    <img src="../static/images/avataaars.png" alt="">
+                </div>
+                <div class="profile-photo-details">
+                    <h1>Add your profile pic</h1>
+                    <input type="file" name="photo" id="photo" multiple="multiple"  accept="image/*">
+                    <label for="photo"><i class="fas fa-upload"></i> Choose a Photo</label>
+                </div>
+            </div>
+            <div class="profile-details">
+                <table>
+                    <tr>
+                        <td class="td-head"><i class="fas fa-user"></i>&nbsp&nbspFull Name:</td>
+                        <td class="td-content">Example Name</td>
+                    </tr>
+                    <tr>
+                        <td class="td-head"><i class="fas fa-envelope"></i>&nbsp&nbspEmail ID:</td>
+                        <td class="td-content">Example@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td class="td-head"><i class="fas fa-phone-alt"></i>&nbsp&nbspPhone:</td>
+                        <td class="td-content">9874512345</td>
+                    </tr>
+                    <tr>
+                        <td class="td-head"><i class="fas fa-id-card"></i>&nbsp&nbspLicense ID:</td>
+                        <td class="td-content">125418597655</td>
+                    </tr>
+                    <tr>
+                        <td class="td-head"><i class="fas fa-users"></i>&nbsp&nbspPosition:</td>
+                        <td class="td-content">Senior Judge</td>
+                    </tr>
+                </table>      
+            </div>
         </section>
     </div>
 </body>
