@@ -11,26 +11,49 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Filepond cdn  -->
     <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
-    <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
+    <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css"
+        rel="stylesheet">
 </head>
 
 <body>
     <div class="predict-container">
         <%- include('../views/partials/user/navbar.ejs') %>
             <section class="predict-main">
-                <h2>Header</h2> <br><br>
+                <h2>Header</h2>
                 <div class="predict-content">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quas voluptatibus ducimus rem est
                     asperiores voluptates doloribus? Et velit asperiores corporis voluptas odit obcaecati voluptatibus
                     omnis
                     odio suscipit. Quod dolor facere illum labore fugit.
-                </div><br><br>
-                <div class="predict-upload">
-                    <form action="/user/predict" name="predict-form" method="POST">
-                        <input type="file" name="predict" id="predict" multiple="multiple"  accept="image/*">
-                        <input type="submit" value="Predict" class="predict-btn">
-                    </form>
-                </div> <br>
+                </div>
+                <div class="predict-upload-container">
+                    <div class="predict-upload">
+                        <form action="/user/predict" name="predict-form" method="POST">
+                            <input type="file" name="predict" id="predict" multiple="multiple" accept="image/*">
+                            <label for="predict"><i class="fas fa-upload"></i>&nbspChoose a Photo</label> 
+                        </form>
+                    </div>
+                    <h1>OR</h1>
+                    <div class="predict-upload">
+                        <form action="/user/predict" name="predict-form" method="POST">
+                            <input type="file" name="predict" id="predict" multiple="multiple" accept="image/*">
+                            <label for="predict"><i class="fas fa-camera"></i>&nbspClick a Photo</label>
+                            <!-- <input type="submit" value="Predict" class="predict-btn"> -->
+                        </form>
+                    </div>
+                </div>
+                <div class="predict-details">                   
+                        <input type="date">
+                        <select name="language" id="language">
+                            <option value="">Select Language</option>
+                            <option value="english">English</option>
+                            <option value="hindi">Hindi</option>
+                            <option value="bengali">Bengali</option>
+                            <option value="tamil">Tamil</option>
+                            <option value="telegu">Telegu</option>
+                        </select>                   
+                </div>
+                <div class="predict-btn-wrapper"><input type="submit" value="Predict" class="predict-btn"></div>
                 <div class="predict-preview">
 
                 </div>
@@ -43,7 +66,7 @@
 <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
 <!-- <script src="../static/js/predict.js"></script> -->
 <script>
-   
+
 </script>
 
 </html>
