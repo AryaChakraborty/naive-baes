@@ -27,29 +27,41 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam accusantium, culpa, iure quidem
                     soluta magni vel eum ullam, voluptatibus necessitatibus odit esse suscipit excepturi
                 </div>
-                <br>
-                <div class="cta-box">
+                <!-- <div class="cta-box">
                     <div class="predict-box">
                         <button class="predict-btn cta-btn">
-                            <i class="fa fa-brain"></i>
-                            <a href="/user/predict">Predict</a>                            
+                            
+                            <a href="/user/predict"><i class="fa fa-brain"></i>Predict</a>
                         </button>
                         <div class="predict-video cta-video"> Predict Video</div>
                     </div>
                     <div class="submit-box">
                         <button class="submit-btn cta-btn">
                             <i class="fa fa-gavel"></i>
-                            <a href="/user/submit">Submit</a>                            
+                            <a href="/user/submit">Submit</a>
                         </button>
                         <div class="submit-video cta-video">Submit Video</div>
                     </div>
+                </div> -->
+                <div class="cta-box">
+                    <a class="predict-btn cta-btn" href="/user/predict"><i class="fa fa-brain"></i>&nbspPredict</a>
+                    <a class="submit-btn cta-btn" href="/user/submit"><i class="fa fa-gavel"></i>&nbspSubmit</a>
                 </div>
+                <div class="video-box">
+                    <div class="predict-video cta-video"><iframe  src="https://www.youtube.com/embed/BgGj9dp8JHE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                    <div class="submit-video cta-video"><iframe  src="https://www.youtube.com/embed/BgGj9dp8JHE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                </div>
+
             </section>
-            <footer>Footer</footer>
+            <footer>
+                <div class="copyright">
+                    <p>© Copyright 2022 - Naive Baes</p>
+                </div>
+            </footer>
     </div>
 </body>
 <script>
-    
+
     const caseSearch = document.getElementById("caseSearch");
     const form = document.forms["caseForm"];
 
