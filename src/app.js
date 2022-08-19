@@ -42,6 +42,9 @@ app.use("/user",profileRouter);
 const predictRouter = require("./route/predict.route");
 app.use("/user",predictRouter);
 
+const submitRouter = require("./route/submit.route");
+app.use("/user",submitRouter);
+
 //* Listen
 app.listen(port, () => {
     console.log(`The application started successfully on port ${port}`);
