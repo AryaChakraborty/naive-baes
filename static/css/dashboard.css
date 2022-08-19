@@ -170,7 +170,7 @@ a, a:hover, a:focus, a:active {
 }
 /* Footer  */
 
-footer .copyright {
+/* footer .copyright {
     font-size: 1.10rem;
     font-weight: 300;
     background-color: #64bdf42f;
@@ -178,7 +178,7 @@ footer .copyright {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: grey;
     text-align: center;
-}
+} */
 
 @media(max-width: 1100px) {
     .video-box{
