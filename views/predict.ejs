@@ -30,7 +30,7 @@
                     <div class="predict-upload">
                         <form action="/user/predict" name="predict-form" method="POST">
                             <input type="file" name="predict" id="predict" multiple="multiple" accept="image/*">
-                            <label for="predict"><i class="fas fa-upload"></i>&nbspChoose a Photo</label> 
+                            <label for="predict"><i class="fas fa-upload"></i>&nbspChoose a Photo</label>
                         </form>
                     </div>
                     <h1>OR</h1>
@@ -42,29 +42,30 @@
                         </form>
                     </div>
                 </div>
-                <div class="predict-details">                   
-                        <input type="date">
-                        <select name="language" id="language">
-                            <option value="">Select Language</option>
-                            <option value="english">English</option>
-                            <option value="hindi">Hindi</option>
-                            <option value="bengali">Bengali</option>
-                            <option value="tamil">Tamil</option>
-                            <option value="telegu">Telegu</option>
-                        </select>                   
+                <div class="predict-details">
+                    <input type="date">
+                    <select name="language" id="language">
+                        <option value="">Select Language</option>
+                        <option value="english">English</option>
+                        <option value="hindi">Hindi</option>
+                        <option value="bengali">Bengali</option>
+                        <option value="tamil">Tamil</option>
+                        <option value="telegu">Telegu</option>
+                    </select>
                 </div>
                 <div class="predict-btn-wrapper"><input type="submit" value="Predict" class="predict-btn"></div>
                 <div class="predict-preview">
 
                 </div>
             </section>
-            <footer>Footer</footer>
+            <%- include('../views/partials/user/footer.ejs') %>
+
     </div>
 </body>
 <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
 <script src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
 <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
-<script src="../static/js/predict.js"></script>
+<!-- <script src="../static/js/predict.js"></script> -->
 <script>
 
 </script>
