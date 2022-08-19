@@ -1,0 +1,9 @@
+footer .copyright {
+    font-size: 1.10rem;
+    font-weight: 300;
+    background-color: #64bdf42f;
+    padding: 1.5rem 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: grey;
+    text-align: center;
+}
