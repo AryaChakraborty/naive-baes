@@ -7,17 +7,17 @@ const judgementSchema = new mongoose.Schema({
         required: true,
         unique: true
     },
-    createdAt: {
-        type: Date,
-        default: Date.now
-    },
-    updatedAt: {
-        type: Date,
-        default: Date.now
-    },
-    crimeDate: {
-        type: Date
-    },
+    // createdAt: {
+    //     type: Date,
+    //     default: Date.now
+    // },
+    // updatedAt: {
+    //     type: Date,
+    //     default: Date.now
+    // },
+    // crimeDate: {
+    //     type: Date
+    // },
     crimeLocation: {
         type: String
     },
@@ -34,19 +34,19 @@ const judgementSchema = new mongoose.Schema({
             }
         }
     ],
-    guilty: {
-        type: Boolean
-    },
+    // guilty: {
+    //     type: Boolean
+    // },
     punishment: {
         type: String
     }
 });
 
-judgementSchema.pre('save', function preSave(next) {
-    let schema = this;
-    schema.updatedAt(Date.now());
-    next();
-});
+// judgementSchema.pre('save', function preSave(next) {
+//     let schema = this;
+//     schema.updatedAt(Date.now());
+//     next();
+// });
 
 const Judgement = new mongoose.model("Judgement", judgementSchema);
 
