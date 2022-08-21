@@ -23,7 +23,7 @@ const judgementSchema = new mongoose.Schema({
     },
     documents: [
         {
-            image: {
+            url: {
                 type: String
             },
             fileType: {

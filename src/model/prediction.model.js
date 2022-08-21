@@ -23,7 +23,7 @@ const predictionSchema = new mongoose.Schema({
     },
     documents: [
         {
-            image: {
+            url: {
                 type: String
             },
             fileType: {
