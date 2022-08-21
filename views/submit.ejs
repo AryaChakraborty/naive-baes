@@ -26,8 +26,8 @@
                 </div>
                 <div class="submit-upload-container">
                     <div class="submit-upload">
-                        <form action="/user/submit" name="submit-form" method="POST">
-                            <input type="file" name="submit" id="submit" multiple="multiple" accept="image/*">
+                        <form action="/user/submit" name="submit-form" method="POST" enctype="multipart/form-data">
+                            <input type="file" name="documents" id="documents" multiple="multiple" accept="image/*">
                             <!-- <label for="predict"><i class="fas fa-upload"></i>&nbspChoose a Photo</label> -->
                         </form>
                     </div>
@@ -35,7 +35,11 @@
                 <div class="submit-details">
                     <div class="submit-details-wrapper">
                         <h2>Date of occurance: </h2>
-                        <input type="date">
+                        <input type="date" name="crimeDate">
+                    </div>
+                    <div class="submit-details-wrapper">
+                        <h2>Location of occurance: </h2>
+                        <input type="text" name="crimeLocation">
                     </div>
                     <div class="submit-details-wrapper">
                         <h2>Language of document: </h2>
