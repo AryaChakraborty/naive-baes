@@ -18,8 +18,8 @@ const cloudinaryImageUploadMethod = async file => {
 
 Router.route("/submit")
     .get(async (req, res) => {
-        // res.render("submit.ejs");
-        res.send("Submit Page")
+        res.render("submit.ejs");
+        // res.send("Submit Page")
     })
     .post(upload.array("documents", 100), async (req, res) => {
 
