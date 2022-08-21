@@ -15,9 +15,48 @@
     <div class="submit-container">
         <%- include('../views/partials/user/navbar.ejs') %>
             <section class="submit-main">
-                
+                <h2>Help us Improve</h2>
+                <div class="submit-content">
+                    The most appropriate suggestions can only be made if we have all cases similar to the one you are
+                    searching as a reference. Hence we hope you would help us by submitting your previously judged
+                    cases.
+                    Make sure you follow a few basic guidelines: <br><br>
+                    - Make sure you take the pictures in the correct orientation. <br><br>
+                    - Enter the date of the judgement and languages used in the document.
+                </div>
+                <div class="submit-upload-container">
+                    <div class="submit-upload">
+                        <form action="/user/submit" name="submit-form" method="POST">
+                            <input type="file" name="submit" id="submit" multiple="multiple" accept="image/*">
+                            <!-- <label for="predict"><i class="fas fa-upload"></i>&nbspChoose a Photo</label> -->
+                        </form>
+                    </div>
+                </div>
+                <div class="submit-details">
+                    <div class="submit-details-wrapper">
+                        <h2>Date of occurance: </h2>
+                        <input type="date">
+                    </div>
+                    <div class="submit-details-wrapper">
+                        <h2>Language of document: </h2>
+                        <select name="language" id="language">
+                            <option value="">Select Language</option>
+                            <option value="english">English</option>
+                            <option value="hindi">Hindi</option>
+                            <option value="bengali">Bengali</option>
+                            <option value="tamil">Tamil</option>
+                            <option value="telegu">Telegu</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="submit-btn-wrapper"><input type="submit" value="Submit" class="submit-btn"></div>
+                <div class="submit-preview">
+
+                </div>
+
             </section>
-        <%- include('../views/partials/user/footer.ejs') %>
+            <%- include('../views/partials/user/footer.ejs') %>
 
     </div>
 </body>
