@@ -17,7 +17,9 @@ Router.route("/login")
 
             const userData = await user.findOne({ licenseID });
             const passwordDB = userData?.password;
-
+            
+            const fullName = userData?.fullName;
+            
             if (userData == null) {
                 // res.status(401).json(
                 //     {
@@ -39,6 +41,7 @@ Router.route("/login")
 
             }
             else {
+                req.flash("login-success", `Welcome ${fullName}`);
                 res.status(200).redirect("/user/dashboard");
             }
         }
