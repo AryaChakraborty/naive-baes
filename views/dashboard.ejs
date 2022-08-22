@@ -12,6 +12,11 @@
 </head>
 
 <body>
+    <% if ( successMsg.length> 0 ) { %>
+		<div class="success">
+			<%= successMsg %>
+		</div>
+		<% } %>
     <div class="dashboard-container">
         <%- include('../views/partials/user/navbar.ejs') %>
             <section class="dashboard-main">
