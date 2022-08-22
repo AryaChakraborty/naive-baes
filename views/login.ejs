@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Login</title>
 	<link rel="stylesheet" href="../static/css/login.css">
-	 <!-- font awesome cdn link  -->
+	<!-- font awesome cdn link  -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 	<script defer src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<script defer src="../static/js/login.js"></script>
@@ -14,52 +14,57 @@
 </head>
 
 <body>
-	<div class="mainscreen">
-		<!-- Creating top part -->
-		<div class="toppart"></div>
-		<div class="top-wave">
-			<img src="../static/images/login-page/wave (1).svg" alt="">
+	<% if ( errorMsg.length> 0 ) { %>
+		<div class="error">
+			<%= errorMsg %>
 		</div>
-			
-		<!-- Creating bottom part form img and form -->
-		<div class="bottompart">
-			<!-- Image Part -->
-			<div class="imgpart">
-				<img src="../static/images/login-page/img-01.png" class="heroimg" alt="Login img">
+		<% } %>
+
+			<div class="mainscreen">
+				<!-- Creating top part -->
+				<div class="toppart"></div>
+				<div class="top-wave">
+					<img src="../static/images/login-page/wave (1).svg" alt="">
+				</div>
+
+				<!-- Creating bottom part form img and form -->
+				<div class="bottompart">
+					<!-- Image Part -->
+					<div class="imgpart">
+						<img src="../static/images/login-page/img-01.png" class="heroimg" alt="Login img">
+					</div>
+					<!-- Form Part -->
+					<div class="formpart">
+						<form action="/login" method="POST" name="login-form" id="form">
+							<h2>Member Sign In</h2>
+							<!-- For Full Name -->
+							<label for="licenseID">License ID</label>
+							<div class="inputbox">
+								<i class="fas fa-user"></i>
+								<input name="licenseID" type="text" class="name" autocomplete="off" id="licenseID">
+							</div>
+
+							<!-- For user email to receive notes -->
+							<label for="password">Password</label>
+							<div class="inputbox">
+								<i class="fas fa-lock"></i>
+								<input type="password" class="email" name="password" autocomplete="off" id="password">
+							</div>
+
+							<!-- For Privacy Policy Line -->
+							<label class="privacy_policy">By clicking the submit button, you agree to our
+								<span>Terms & Conditions</span> and <span>Privacy Policy</span>.</label>
+
+							<!-- For Submit Button-->
+							<input type="submit" value="Submit" class="submitbtn">
+						</form>
+					</div>
+				</div>
+				<div class="bottom-wave">
+					<img src="../static/images/login-page/wave.svg" alt="">
+				</div>
 			</div>
 
-			<!-- Form Part -->
-			<div class="formpart">
-				<form action="/login" method="POST" name="login-form" id="form" >
-					<h2>Member Sign In</h2>
-					<!-- For Full Name -->
-					<label for="licenseID">License ID</label>
-					<div class="inputbox">
-						<i class="fas fa-user"></i>
-						<input name="licenseID" type="text" class="name" autocomplete="off" id="licenseID">
-					</div>
-
-					<!-- For user email to receive notes -->
-					<label for="password">Password</label>
-					<div class="inputbox">
-						<i class="fas fa-lock"></i>
-						<input type="password" class="email" name="password" autocomplete="off" id="password">
-					</div>
-
-					<!-- For Privacy Policy Line -->
-					<label class="privacy_policy">By clicking the submit button, you agree to our 
-					<span>Terms & Conditions</span> and <span>Privacy Policy</span>.</label>
-
-					<!-- For Submit Button-->
-					<input type="submit" value="Submit" class="submitbtn">
-				</form>
-			</div>	
-		</div>
-		<div class="bottom-wave">
-			<img src="../static/images/login-page/wave.svg" alt="">
-		</div>
-	</div>
-	
 </body>
 
 </html>

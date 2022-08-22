@@ -180,6 +180,40 @@ a, a:hover, a:focus, a:active {
     text-align: center;
 } */
 
+/* Success  */
+.success {
+    min-width: max-content;
+    width: 40%;
+    text-align: center;
+    padding: 1rem;
+    color: #ffffff;
+    background-color: #42ba96;
+    position: absolute;
+    left: 50%;
+    top: 8%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    z-index: 100;
+    animation: fadeIn 0.7s, hideAnimation 0s ease-in 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes hideAnimation {
+    to {
+        visibility: hidden;
+    }
+}
+
 @media(max-width: 1100px) {
     .video-box{
         flex-direction: column;

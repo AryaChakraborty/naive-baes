@@ -1,54 +1,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
-body
-{
-	font-family: 'Roboto', sans-serif!important;
-	margin:0;
-	padding:0;
-	box-sizing: border-box;
+body {
+    font-family: 'Roboto', sans-serif !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     overflow-y: hidden;
 }
-.mainscreen
-{
-	min-height: 100vh;
-	width: 100%;
-	display: flex;
+
+.mainscreen {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
     flex-direction: column;
     background-color: #f1f8fc;
 }
 
 
 /*Styling top part*/
-.toppart
-{
-	display: flex;
+.toppart {
+    display: flex;
     flex-direction: column;
     padding: 3rem 10rem 10rem;
     background-color: #f1f8fc;
 }
-.top-wave{
+
+.top-wave {
     position: absolute;
-    top:0px;
+    top: 0px;
     left: 0px;
     width: 100%;
 }
-.bottom-wave{
+
+.bottom-wave {
     position: absolute;
-    bottom:0px;
+    bottom: 0px;
     left: 0px;
     width: 100%;
     z-index: 0;
-   
+
 }
+
 /*Top part styling completed*/
 
 
 /*Styling Form box part*/
 
 
-.bottompart
-{
-	width: 60rem;
+.bottompart {
+    width: 60rem;
     margin: 0 auto;
     background: white;
     position: relative;
@@ -67,18 +67,17 @@ and another is form part*/
 
 /*Styling image part froom here*/
 
-.imgpart
-{
-	background: #64bcf4 ;
-	width: 25rem;
-	display: inline-flex;
+.imgpart {
+    background: #64bcf4;
+    width: 25rem;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-	border-top-left-radius: 1.5rem;
+    border-top-left-radius: 1.5rem;
     border-bottom-left-radius: 1.5rem;
 }
-.heroimg
-{
+
+.heroimg {
     height: 18rem;
 }
 
@@ -86,36 +85,36 @@ and another is form part*/
 
 
 /*Styling form part starts here*/
-.formpart
-{
-	width: 35rem;
-	border-bottom-right-radius: 1.5rem;
+.formpart {
+    width: 35rem;
+    border-bottom-right-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
     padding: 2rem 2rem 4rem;
-    
+
 }
-h2{
-	color: #3F51B5;
+
+h2 {
+    color: #3F51B5;
     font-size: 1.9rem;
     margin-bottom: 2rem;
     font-weight: 600;
 }
-label
-{
-	font-size: 1.2rem;
+
+label {
+    font-size: 1.2rem;
     color: grey;
     font-weight: 400;
     display: block;
     margin: 0.5rem 0;
 }
-.inputbox
-{
-	width: 26rem;
+
+.inputbox {
+    width: 26rem;
     padding: 0.5rem;
     border: 2px solid #b9b6b6;
     margin-bottom: 1rem;
     border-radius: 0.3rem;
-    
+
 }
 
 .inputbox input {
@@ -128,16 +127,15 @@ label
     font-weight: 500;
 }
 
-i{
+i {
     color: grey;
     padding-right: 5px;
 }
 
 
 /*Styling the privacy policy and terms and condition line*/
-.privacy_policy
-{
-	font-size: 0.9rem;
+.privacy_policy {
+    font-size: 0.9rem;
     color: #a29b9b;
     font-weight: 400;
     max-width: 28rem;
@@ -145,17 +143,16 @@ i{
     margin-bottom: 1rem;
 }
 
-.privacy_policy span{
-	color: #4fa3ca;
+.privacy_policy span {
+    color: #4fa3ca;
     font-weight: 500;
     cursor: pointer;
 }
 
 
 /*Styling submit btn */
-.submitbtn
-{
-	width: 13rem;
+.submitbtn {
+    width: 13rem;
     padding: 0.7rem;
     font-size: 1.2rem;
     color: white;
@@ -168,49 +165,89 @@ i{
 }
 
 /*Styling submit button hover state*/
-.submitbtn:hover
-{
-	transform: scale(1.02) translateY(-2px);
+.submitbtn:hover {
+    transform: scale(1.02) translateY(-2px);
     box-shadow: 3px 3px 6px #38373785;
 }
+
 /*Form styling complted*/
 
+
+/* error  */
+.error {
+    min-width: max-content;
+    width: 40%;
+    text-align: center;
+    padding: 1rem;
+    color: #ffffff;
+    background-color: #f56b6b;
+    position: absolute;
+    left: 50%;
+    top: 8%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    z-index: 100;
+    animation: fadeIn 0.7s, hideAnimation 0s ease-in 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes hideAnimation {
+    to {
+        visibility: hidden;
+    }
+}
+
 @media only screen and (max-width: 1000px) {
-  .toppart {
-    padding: 3rem 2rem 10rem;
-}
-.bottompart
-{
-	flex-direction: column;
-	width: auto;
-}
-.imgpart
-{
-	width: 100%;
-    border-top-right-radius: 1.5rem;
-    border-bottom-left-radius: 0;
-}
-.heroimg {
-    height: 10rem;
-    margin: 1rem;
+    .toppart {
+        padding: 3rem 2rem 10rem;
     }
+
+    .bottompart {
+        flex-direction: column;
+        width: auto;
+    }
+
+    .imgpart {
+        width: 100%;
+        border-top-right-radius: 1.5rem;
+        border-bottom-left-radius: 0;
+    }
+
+    .heroimg {
+        height: 10rem;
+        margin: 1rem;
+    }
+
     .formpart {
-    width: auto;
+        width: auto;
     }
 }
+
 @media only screen and (max-width: 600px) {
-	.inputbox {
-    width: 16rem;
-}
-.options {
-    width: 16rem;
+    .inputbox {
+        width: 16rem;
     }
+
+    .options {
+        width: 16rem;
+    }
+
     .eachoption {
-    display: block;
-    width: 100%;
-}
-  .links
-  {
-    display:none;
-  }
+        display: block;
+        width: 100%;
+    }
+
+    .links {
+        display: none;
+    }
 }

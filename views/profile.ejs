@@ -18,11 +18,11 @@
             </div>
             <div class="profile-photo-container">
                 <div class="profile-photo-wrapper">
-                    <img src="../static/images/avataaars.png" alt="">
+                    <img src=<%-image%> alt="">
                 </div>
                 <div class="profile-photo-details">
                     <h1>Add your profile pic</h1>
-                    <input type="file" name="photo" id="photo" multiple="multiple"  accept="image/*">
+                    <input type="file" name="photo" id="photo" accept="image/*">
                     <label for="photo"><i class="fas fa-upload"></i> Choose a Photo</label>
                 </div>
             </div>
@@ -30,23 +30,23 @@
                 <table>
                     <tr>
                         <td class="td-head"><i class="fas fa-user"></i>&nbsp&nbspFull Name:</td>
-                        <td class="td-content">Example Name</td>
+                        <td class="td-content"><%=fullName%></td>
                     </tr>
                     <tr>
                         <td class="td-head"><i class="fas fa-envelope"></i>&nbsp&nbspEmail ID:</td>
-                        <td class="td-content">Example@gmail.com</td>
+                        <td class="td-content"><%=email%></td>
                     </tr>
                     <tr>
                         <td class="td-head"><i class="fas fa-phone-alt"></i>&nbsp&nbspPhone:</td>
-                        <td class="td-content">9874512345</td>
+                        <td class="td-content"><%=phoneNumber%></td>
                     </tr>
                     <tr>
                         <td class="td-head"><i class="fas fa-id-card"></i>&nbsp&nbspLicense ID:</td>
-                        <td class="td-content">125418597655</td>
+                        <td class="td-content"><%=licenseID%></td>
                     </tr>
                     <tr>
                         <td class="td-head"><i class="fas fa-users"></i>&nbsp&nbspPosition:</td>
-                        <td class="td-content">Senior Judge</td>
+                        <td class="td-content"><%=position%></td>
                     </tr>
                 </table>      
             </div>
