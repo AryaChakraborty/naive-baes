@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "aws-sdk": "^2.1199.0",
     "cloudinary": "^1.30.1",
     "dotenv": "^16.0.0",
     "ejs": "^3.1.8",
