@@ -9,20 +9,15 @@ const storage = multer.diskStorage({
     filename: function (req, file, callback) {
         //* LicenseID to be taken from cookies
         // callback(null, `${licenseID}-${i++}` + path.extname(file.originalname));
-        callback(null, `image-${i++}` + path.extname(file.originalname));
+        callback(null, file.originalname);
     }
 });
 
+//TODO: If we thought to not use diskStorage
+// const storage = multer.memoryStorage();
+
 const upload = multer({
-    storage: storage,
-    
-    // fileFilter: function (req, file, callback) {
-    //     let ext = path.extname(file.originalname);
-    //     if (ext !== '.pdf') {
-    //         return callback(null, false, new Error('Only pdf is allowed'));
-    //     }
-    //     callback(null, true);
-    // }
+    storage: storage
 });
 
 module.exports = { upload, storage };
