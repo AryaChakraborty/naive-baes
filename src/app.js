@@ -1,16 +1,27 @@
 const express = require("express");
+const session = require("express-session");
+const flash = require("connect-flash");
 const app = express();
 const port = process.env.PORT || 5000;
 const path = require("path");
 const { urlencoded } = require("express");
 const views_path = path.join(__dirname, "../views");
 const static_path = path.join(__dirname, "../static");
+
 require("../src/db/connection");
 require('dotenv').config();
+
 app.use(express.json());
 app.use(urlencoded({ extended: false }));
 app.use("/static", express.static(static_path));
 
+app.use(flash());
+app.use(session({
+    secret: String(process.env.SESSION_SECRET),
+    cookie: {},
+    resave: false,
+    saveUninitialized: false
+}));
 
 app.set("view engine", "ejs");
 app.set("views", views_path);
