@@ -1,6 +1,7 @@
 const express = require("express");
 const session = require("express-session");
 const flash = require("connect-flash");
+const bodyParser = require('body-parser')
 const app = express();
 const port = process.env.PORT || 5000;
 const path = require("path");
@@ -14,7 +15,8 @@ require('dotenv').config();
 app.use(express.json());
 app.use(urlencoded({ extended: false }));
 app.use("/static", express.static(static_path));
-
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 app.use(flash());
 app.use(session({
     secret: String(process.env.SESSION_SECRET),
@@ -55,6 +57,9 @@ app.use("/user",predictRouter);
 
 const submitRouter = require("./route/submit.route");
 app.use("/user",submitRouter);
+
+const keywordSearchRouter = require("./route/keyword.search.route");
+app.use("/user",keywordSearchRouter);
 
 //* Listen
 app.listen(port, () => {
