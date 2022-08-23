@@ -13,33 +13,37 @@
 
 <body>
     <% if ( successMsg.length> 0 ) { %>
-		<div class="success">
-			<%= successMsg %>
-		</div>
-		<% } %>
-    <div class="dashboard-container">
-        <%- include('../views/partials/user/navbar.ejs') %>
-            <section class="dashboard-main">
-                <form action="/keywordSearch" name="caseForm" method="POST">
-                    <input class="dashboard-search" type="search" name="case-search" id="caseSearch"
-                        placeholder="Search for keywords...">
-                    <input type="submit" value="🔍" id="submitBtn">
-                </form>
-                <h2 class="dashboard-header">Judgment Accelerated !</h2>
-                <div class="dashboard-content">
-                    We have made numerous provisions to make sure that while you judge a case you have ample resources
-                    and materials to help you make better decisions. <br><br>
+        <div class="success">
+            <%= successMsg %>
+        </div>
+        <% } %>
+            <div class="dashboard-container">
+                <%- include('../views/partials/user/navbar.ejs') %>
+                    <section class="dashboard-main">
+                        <form action="/user/dashboard" name="caseForm" method="POST"
+                            enctype="application/x-www-form-urlencoded">
+                            <input class="dashboard-search" type="text" name="caseSearch" id="caseSearch"
+                                placeholder="Search for keywords...">
+                            <input type="submit" value="🔎" id="submitBtn">
+                        </form>
+                        <h2 class="dashboard-header">Judgment Accelerated !</h2>
+                        <div class="dashboard-content">
+                            We have made numerous provisions to make sure that while you judge a case you have ample
+                            resources
+                            and materials to help you make better decisions. <br><br>
 
-                    Here's a walkthrough:<br>
-                    - You can search for similar cases in the search bar above.<br>
-                    - You may Predict the most probable judgement by clicking on the Predict button and submitting
-                    relevant documents mentioned.<br>
-                    - You can save a judgement for future reference and view it the favourite section by clicking on you
-                    profile icon.<br>
-                    - Help us by submitting relevant case documents.<br>
-                    - You can view your previously submitted cases in the section
-                </div>
-                <!-- <div class="cta-box">
+                            Here's a walkthrough:<br>
+                            - You can search for similar cases in the search bar above.<br>
+                            - You may Predict the most probable judgement by clicking on the Predict button and
+                            submitting
+                            relevant documents mentioned.<br>
+                            - You can save a judgement for future reference and view it the favourite section by
+                            clicking on you
+                            profile icon.<br>
+                            - Help us by submitting relevant case documents.<br>
+                            - You can view your previously submitted cases in the section
+                        </div>
+                        <!-- <div class="cta-box">
                     <div class="predict-box">
                         <button class="predict-btn cta-btn">
                             
@@ -55,30 +59,31 @@
                         <div class="submit-video cta-video">Submit Video</div>
                     </div>
                 </div> -->
-                <div class="cta-box">
-                    <a class="predict-btn cta-btn" href="/user/predict"><i class="fa fa-brain"></i>&nbspPredict</a>
-                    <a class="submit-btn cta-btn" href="/user/submit"><i class="fa fa-gavel"></i>&nbspSubmit</a>
-                </div>
-                <div class="video-box">
-                    <div class="predict-video cta-video"><iframe src="https://www.youtube.com/embed/BgGj9dp8JHE"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe></div>
-                    <div class="submit-video cta-video"><iframe src="https://www.youtube.com/embed/BgGj9dp8JHE"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe></div>
-                </div>
+                        <div class="cta-box">
+                            <a class="predict-btn cta-btn" href="/user/predict"><i
+                                    class="fa fa-brain"></i>&nbspPredict</a>
+                            <a class="submit-btn cta-btn" href="/user/submit"><i class="fa fa-gavel"></i>&nbspSubmit</a>
+                        </div>
+                        <div class="video-box">
+                            <div class="predict-video cta-video"><iframe src="https://www.youtube.com/embed/BgGj9dp8JHE"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe></div>
+                            <div class="submit-video cta-video"><iframe src="https://www.youtube.com/embed/BgGj9dp8JHE"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe></div>
+                        </div>
 
-            </section>
-            <%- include('../views/partials/user/footer.ejs') %>
+                    </section>
+                    <%- include('../views/partials/user/footer.ejs') %>
 
-                <!-- <footer>
+                        <!-- <footer>
                 <div class="copyright">
                     <p>© Copyright 2022 - Naive Baes</p>
                 </div>
             </footer> -->
-    </div>
+            </div>
 </body>
 <script>
 
@@ -89,6 +94,5 @@
         event.preventDefault();
     })
 </script>
-
 
 </html>
