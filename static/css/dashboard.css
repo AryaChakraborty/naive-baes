@@ -34,21 +34,21 @@ body {
     justify-content: center;
 }
 
-.dashboard-search {
+/* .dashboard-search {
     width: 80%;
     padding: 1rem;
     border: 2px solid var(--darkOne);
     outline: none;
     border-radius: 10px;
     font-size: 20px;
-}
+} */
 
 .dashboard-main h2 {
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
-.dashboard-main form {
+/* .dashboard-main form {
     width: 80%;
     display: flex;
     justify-content: center;
@@ -67,7 +67,7 @@ body {
 
 #submitBtn:hover {
     background-color: var(--hoverColor);
-}
+} */
 
 .dashboard-content {
     width: 60%;
