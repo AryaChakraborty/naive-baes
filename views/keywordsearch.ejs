@@ -14,50 +14,56 @@
 <body>
     <div class="keyword-container">
         <%- include('../views/partials/user/navbar.ejs') %>
-        <section class="keyword-main">
-            <h2>Here are your results</h2>
-            <div class="keyword-content">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos ipsum soluta, voluptatem et vel, qui,
-                error officiis sint quidem ea nam? Sint cupiditate inventore libero harum. Sequi placeat consequatur
-                iure ullam animi aliquid iste incidunt distinctio atque minus quos id quibusdam saepe nobis, a rerum
-                praesentium, sunt ab eaque accusamus!
-            </div>
-            <div class="result-container">
-                <div class="result-wrapper">
-                    <div class="result-text">
-                        <h3>Case title</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius facere odio illum
-                            praesentium assumenda sit repellendus porro placeat soluta. Obcaecati!</p>
+            <section class="keyword-main">
+                <form action="/user/dashboard" name="caseForm" method="POST"
+                    enctype="application/x-www-form-urlencoded">
+                    <input class="dashboard-search" type="text" name="caseSearch" id="caseSearch"
+                        placeholder="Search for keywords...">
+                    <input type="submit" value="🔎" id="submitBtn">
+                </form>
+                <h2>Here are your results</h2>
+                <div class="keyword-content">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos ipsum soluta, voluptatem et vel, qui,
+                    error officiis sint quidem ea nam? Sint cupiditate inventore libero harum. Sequi placeat consequatur
+                    iure ullam animi aliquid iste incidunt distinctio atque minus quos id quibusdam saepe nobis, a rerum
+                    praesentium, sunt ab eaque accusamus!
+                </div>
+                <div class="result-container">
+                    <div class="result-wrapper">
+                        <div class="result-text">
+                            <h3>Case title</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius facere odio illum
+                                praesentium assumenda sit repellendus porro placeat soluta. Obcaecati!</p>
+                        </div>
+                        <div class="result-download">
+                            <a href="#">Show Details</a>
+                        </div>
                     </div>
-                    <div class="result-download">
-                        <a href="#">Show Details</a>
+                    <div class="result-wrapper">
+                        <div class="result-text">
+                            <h3>Case title</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius facere odio illum
+                                praesentium assumenda sit repellendus porro placeat soluta. Obcaecati!</p>
+                        </div>
+                        <div class="result-download">
+                            <a href="#">Show Details</a>
+                        </div>
+                    </div>
+                    <div class="result-wrapper">
+                        <div class="result-text">
+                            <h3>Case title</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius facere odio illum
+                                praesentium assumenda sit repellendus porro placeat soluta. Obcaecati!</p>
+                        </div>
+                        <div class="result-download">
+                            <a href="#">Show Details</a>
+                        </div>
                     </div>
                 </div>
-                <div class="result-wrapper">
-                    <div class="result-text">
-                        <h3>Case title</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius facere odio illum
-                            praesentium assumenda sit repellendus porro placeat soluta. Obcaecati!</p>
-                    </div>
-                    <div class="result-download">
-                        <a href="#">Show Details</a>
-                    </div>
-                </div>
-                <div class="result-wrapper">
-                    <div class="result-text">
-                        <h3>Case title</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius facere odio illum
-                            praesentium assumenda sit repellendus porro placeat soluta. Obcaecati!</p>
-                    </div>
-                    <div class="result-download">
-                        <a href="#">Show Details</a>
-                    </div>
-                </div>
-            </div>
 
 
-        </section>
-        <%- include('../views/partials/user/footer.ejs') %>
+            </section>
+            <%- include('../views/partials/user/footer.ejs') %>
 
     </div>
 </body>
