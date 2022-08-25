@@ -45,6 +45,7 @@ body {
     border-radius: 10px;
     font-size: 20px;
 }
+
 .keyword-main form {
     width: 80%;
     display: flex;
@@ -77,6 +78,7 @@ body {
     background-color: #fff;
     color: #000000;
 }
+
 #submitBtn {
     margin-top: 1rem;
     cursor: pointer;
