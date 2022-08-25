@@ -39,6 +39,8 @@ Router.route("/submit")
 
 
             newJudgement.save((err, result) => {
+                // res.redirect("/loader");
+
                 if (err) {
                     console.log(err);
 
@@ -50,9 +52,14 @@ Router.route("/submit")
 
                 else {
 
-                    res.redirect("/loader");
+                    // res.redirect("/loader");
+
                     let id = newJudgement.id;
                     console.log(id);
+                    // res.render("loader.ejs", {
+                    //     id: id
+                    // })
+                    // res.redirect(`/loader/${id}`)
                     let data = JSON.stringify({
                         "id": id
                     });
@@ -69,13 +76,14 @@ Router.route("/submit")
                     return axios(config)
                         .then(function (response) {
                             console.log(JSON.stringify(response.data));
-                            res.redirect("/user/submit");
+                            // res.redirect("/success");
+                            res.render("success.ejs");
                         })
                         .catch(function (error) {
                             console.log(error);
                         });
 
-                    
+
 
                 }
 
