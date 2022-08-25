@@ -250,4 +250,8 @@ i {
     .links {
         display: none;
     }
+
+    .bottompart {
+        margin: 0 10%;
+    }
 }
