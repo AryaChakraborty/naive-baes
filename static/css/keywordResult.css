@@ -60,6 +60,25 @@ body {
     width: 80%;
 
 }
+.result-container .result-wrapper .result-text h3{
+ padding-bottom: 1rem;
+}
+.result-text .tag-container{
+    display: flex;
+    flex-direction: row;
+    /* padding-top: 1.3rem; */
+}
+.result-text .tag-container .tag-wrapper{
+    background-color: var(--mainColor);
+    border: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 1rem;
+}
 .result-container .result-wrapper .result-download{
     display: flex;
     flex-direction: column;
