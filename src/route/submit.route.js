@@ -3,7 +3,7 @@ const Router = express.Router();
 const judgement = require("../model/judgement.model");
 const { upload } = require("../multer/index");
 const { uploadFile } = require("../services/s3.service");
-
+const request = require('request');
 
 Router.route("/submit")
     .get(async (req, res) => {
@@ -48,10 +48,28 @@ Router.route("/submit")
                     });
                 }
 
-                else return res.status(200).json({
-                    message: "Data saved successfully",
-                    result: result
-                });
+                else {
+                    let _id = newJudgement._id;                    
+
+                    return function(req, res) {
+                        request('http://35.90.190.108/', 
+                        {
+                            json:{_id}
+                        },
+                        function (error, response, body) {
+                            console.error('error:', error); // Print the error
+                            console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+                            console.log('body:', body); // Print the data received
+                            res.send(body); //Display the response on the website
+                        });
+
+                    }
+                }
+
+                // else return res.status(200).json({
+                //     message: "Data saved successfully",
+                //     result: result
+                // });
             })
 
 
