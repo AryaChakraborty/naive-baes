@@ -65,6 +65,9 @@ app.use("/user",submitRouter);
 const keywordSearchRouter = require("./route/keyword.search.route");
 app.use("/user",keywordSearchRouter);
 
+const keywordResultRouter = require("./route/keyword.result.route");
+app.use("/user",keywordResultRouter);
+
 //* Listen
 app.listen(port, () => {
     console.log(`The application started successfully on port ${port}`);
