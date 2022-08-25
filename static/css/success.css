@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --mainColor: #64bcf4;
+    --hoverColor: #5bacdf;
+    --backgroundColor: #f1f8fc;
+    --darkOne: #312f3a;
+    --darkTwo: #45424b;
+    --lightOne: #919191;
+    --lightTwo: #aaa;
+}
+
+body {
+    background-color: var(--backgroundColor);
+    font-family: "Poppins", sans-serif;
+    padding: 10% 0;
+    text-align: center;
+}
+
+.card-content {
+    border-radius: 200px;
+    height: 200px;
+    width: 200px;
+    background: #eff6e6;
+    margin: 0 auto;
+}
+
+.card h1 {
+    color: #88B04B;
+    font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+/* p {
+    color: #404F5E;
+    font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+    font-size: 20px;
+    margin: 0;
+} */
+
+.card .card-content i {
+    color: #9ABC66;
+    font-size: 100px;
+    line-height: 200px;
+    margin-left: -15px;
+}
+
+.card {
+    background: white;
+    padding: 60px;
+    width: 30%;
+    border-radius: 1.5rem;
+    box-shadow: 4px 3px 20px #3535358c;
+    display: inline-block;
+    margin: 0 auto;
+}
