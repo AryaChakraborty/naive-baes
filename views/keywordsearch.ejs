@@ -15,16 +15,33 @@
 
     <!-- <link rel="stylesheet" href="../../assets/vendor/tagify/dist/tagify.css"> -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css" rel="stylesheet" type="text/css" />
 </head>
+<!-- <style>
+    .tagify+input {
+        display: block !important;
+        position: static !important;
+        transform: none !important;
+        width: 90%;
+        margin-top: 1em;
+        padding: .5em;
+    }
+
+    .tagify:not(.tagify--noTags) {
+        --placeholder-color: transparent;
+        --placeholder-color-focus: transparent;
+    }
+</style> -->
 
 <body>
     <div class="keyword-container">
         <%- include('../views/partials/user/navbar.ejs') %>
             <section class="keyword-main">
-                <form action="/user/dashboard" name="caseForm" method="POST"
+                <form action="/user/keywordsearch" name="caseForm" method="POST"
                     enctype="application/x-www-form-urlencoded">
-                    <input class="dashboard-search" type="text" name="caseSearch" id="caseSearch"
-                        placeholder="Search for keywords...">
+                    <!-- <input class="dashboard-search" type="text" name="caseSearch" id="caseSearch"
+                        placeholder="Search for keywords..."> -->
+                    <input type="text" name="caseSearch">
                     <!-- <input class="js-tagify tagify-form-control" placeholder="Write some tags">
                     <input name='drag-sort' value='tag 1, tag 2, tag 3, tag 4, tag 5, tag 6' /> -->
                     <input type="submit" value="🔎" id="submitBtn">
@@ -84,6 +101,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js"></script>
 <!-- <script src="../../assets/vendor/tagify/dist/jQuery.tagify.min.js"></script>
 <script src="../../assets/js/hs.tagify.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify"></script>
+<script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.polyfills.min.js"></script>
 <script>
     // var input = document.querySelector('input[name=drag-sort]'),
     //     tagify = new Tagify(input);
@@ -101,7 +120,22 @@
     //     tagify.updateValueByDOMTags()
     // }
 
-    
+    // var input = document.querySelector('input')
+    var input = document.querySelector('input[name=caseSearch]');
+    new Tagify(input)
+    // var tagify = new Tagify(input, {
+    //     dropdown: {
+    //         maxItems: 0,
+    //         enabled: 0
+    //     },
+    //     whitelist: ["a", "aa", "aaa", "b", "bb", "ccc"]
+    // })
+
+    // tagify.on('change', console.log)
+
+    // tagify.addTags(["a", "b"])
+
+
 </script>
 
 </html>
