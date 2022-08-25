@@ -10,19 +10,19 @@ Router.route("/keywordSearch")
 
     .post(async (req, res) => {
         let caseSearch = req.body.caseSearch;
-        caseSearch = '{"key":'+caseSearch+'}'
-        console.log(caseSearch);
+        caseSearch = '{"key":' + caseSearch + '}'
+        // console.log(caseSearch);
         caseSearch = JSON.parse(caseSearch)['key'];
-        let skeys= [];
-        for (let i of caseSearch){
+        let skeys = [];
+        for (let i of caseSearch) {
             skeys.push(i.value);
             // console.log(i)
         }
-        console.log(skeys);
+        // console.log(skeys);
 
         let data = JSON.stringify({
             "search_key": skeys,
-            "top": 1,
+            "top": 2,
             "order_matters": false
         });
 
@@ -38,9 +38,29 @@ Router.route("/keywordSearch")
         return axios(config)
             .then(function (response) {
                 // console.log(JSON.stringify(response.data));
-                res.send(JSON.stringify(response.data))
+                // res.send(JSON.stringify(response.data))
+
+                let docs = response.data["docs"];
+
+                // for ( let item of docs){
+                //     console.log(item);
+                // }
+
+                // cleanText = response.data["docs"][0].cleanText;
+                // keywords = response.data["docs"][0].keywords;
+                // url = response.data["docs"][0].documents[0].url;
+                // console.log(keywords,url)
+
+                // let params = {
+
+                // }
                 // res.redirect("/success");
-                // res.render("success.ejs");
+                res.render("keywordResult.ejs",
+                    {
+                        "docs": docs
+                    }
+                );
+                res.send(response.data["docs"])
             })
             .catch(function (error) {
                 console.log(error);
