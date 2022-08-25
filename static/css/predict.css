@@ -143,7 +143,12 @@ input[type="date"]{
     font-size: 15px;
     font-weight: 600;
 }
-
+footer .copyright {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
 .predict-upload label:hover {
     background-color: var(--hoverColor);
 }
