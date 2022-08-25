@@ -44,6 +44,10 @@ app.get("/about",async(req,res)=>{
 const loginRouter = require("./route/login.route");
 app.use("/",loginRouter);
 
+//* Loader
+const successRouter = require("./route/success.route");
+app.use("/",successRouter);
+
 //* User Routes
 
 const dashboardRouter = require("./route/dashboard.route");
