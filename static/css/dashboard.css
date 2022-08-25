@@ -166,6 +166,7 @@ a, a:hover, a:focus, a:active {
 .video-box .cta-video iframe{
     width: 480px; 
     height: 270px;
+    border-radius: 10px;
 
 }
 /* Footer  */
