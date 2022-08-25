@@ -17,8 +17,8 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css"> -->
     <link href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css" rel="stylesheet" type="text/css" />
 </head>
-<!-- <style>
-    .tagify+input {
+<style>
+    /* .tagify+input {
         display: block !important;
         position: static !important;
         transform: none !important;
@@ -30,27 +30,31 @@
     .tagify:not(.tagify--noTags) {
         --placeholder-color: transparent;
         --placeholder-color-focus: transparent;
+    } */
+    .tagify {
+        --tags-disabled-bg: #F1F1F1;
+        --tags-border-color: rgb(150, 150, 150);
+        --tags-hover-border-color: rgb(102, 102, 102);
+        display: inline-flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        border: 2px solid var(--tags-border-color);
+        padding: 0;
+        line-height: 0;
+        cursor: text;
+        outline: 0;
+        position: relative;
+        box-sizing: border-box;
+        transition: .1s;
+        border-radius: 10px;
+        width: 60%;
     }
-</style> -->
+</style>
 
 <body>
     <div class="keyword-container">
         <%- include('../views/partials/user/navbar.ejs') %>
             <section class="keyword-main">
-                <form action="/user/keywordsearch" name="caseForm" method="POST"
-                    enctype="application/x-www-form-urlencoded">
-                    <!-- <input class="dashboard-search" type="text" name="caseSearch" id="caseSearch"
-                        placeholder="Search for keywords..."> -->
-                    <input type="text" name="caseSearch">
-                    <!-- <input class="js-tagify tagify-form-control" placeholder="Write some tags">
-                    <input name='drag-sort' value='tag 1, tag 2, tag 3, tag 4, tag 5, tag 6' /> -->
-                    <input type="submit" value="🔎" id="submitBtn">
-                </form>
-                <!-- <form id="upload-widget" method="post" action="/user/keywordsearch" class="dropzone">
-                    <div class="fallback">
-                        <input name="file" type="file" />
-                    </div>
-                </form> -->
 
                 <h2>Here are your results</h2>
                 <div class="keyword-content">
@@ -59,7 +63,36 @@
                     iure ullam animi aliquid iste incidunt distinctio atque minus quos id quibusdam saepe nobis, a rerum
                     praesentium, sunt ab eaque accusamus!
                 </div>
+
+                <form action="/user/keywordsearch" name="caseForm" method="POST"
+                    enctype="application/x-www-form-urlencoded">
+                    <!-- <input class="dashboard-search" type="text" name="caseSearch" id="caseSearch"
+                        placeholder="Search for keywords..."> -->
+                    <input type="text" name="caseSearch">
+                    <div class="submit-options">
+                        <h3>Number of Documents :</h3>
+                        <select name="number" id="number">
+                            <option value="">Select Number</option>
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                        </select>
+                    </div>
+                    
+                    <!-- <input class="js-tagify tagify-form-control" placeholder="Write some tags">
+                    <input name='drag-sort' value='tag 1, tag 2, tag 3, tag 4, tag 5, tag 6' /> -->
+                    <input type="submit" value="Submit" id="submitBtn">
                 
+                </form>
+                <!-- <form id="upload-widget" method="post" action="/user/keywordsearch" class="dropzone">
+                    <div class="fallback">
+                        <input name="file" type="file" />
+                    </div>
+                </form> -->
+
+
+
             </section>
             <%- include('../views/partials/user/footer.ejs') %>
 

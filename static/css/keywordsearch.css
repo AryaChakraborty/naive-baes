@@ -49,21 +49,54 @@ body {
     width: 80%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.submit-options{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.submit-options select{
+    background-color: var(--mainColor);
+    color: #ffffff;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    width: 200px;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+.submit-options select option{
+    background-color: #fff;
+    color: #000000;
 }
 #submitBtn {
-    padding: 1rem;
-    margin-left: 1rem;
+    margin-top: 1rem;
     cursor: pointer;
     border: none;
     outline: none;
     font-size: 18px;
     background-color: var(--mainColor);
     border-radius: 30px;
+    border: none;
+    outline: none;
+    padding: 0.9rem 1.9rem;
+    transition: all 0.3s ease 0s;
+    color: #ffffff;
+    font-weight: 700;
 }
 
 #submitBtn:hover {
     background-color: var(--hoverColor);
 }
+
 .keyword-main h2 {
     margin-top: 2rem;
     margin-bottom: 2rem;
