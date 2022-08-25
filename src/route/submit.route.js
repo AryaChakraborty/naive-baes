@@ -3,7 +3,7 @@ const Router = express.Router();
 const judgement = require("../model/judgement.model");
 const { upload } = require("../multer/index");
 const { uploadFile } = require("../services/s3.service");
-const request = require('request');
+const axios = require("axios");
 
 Router.route("/submit")
     .get(async (req, res) => {
@@ -49,21 +49,34 @@ Router.route("/submit")
                 }
 
                 else {
-                    let _id = newJudgement._id;                    
 
-                    return function(req, res) {
-                        request('http://35.90.190.108/', 
-                        {
-                            json:{_id}
+                    res.redirect("/loader");
+                    let id = newJudgement.id;
+                    console.log(id);
+                    let data = JSON.stringify({
+                        "id": id
+                    });
+
+                    let config = {
+                        method: 'post',
+                        url: 'http://35.90.190.108/update',
+                        headers: {
+                            'Content-Type': 'application/json'
                         },
-                        function (error, response, body) {
-                            console.error('error:', error); // Print the error
-                            console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
-                            console.log('body:', body); // Print the data received
-                            res.send(body); //Display the response on the website
+                        data: data
+                    };
+
+                    return axios(config)
+                        .then(function (response) {
+                            console.log(JSON.stringify(response.data));
+                            res.redirect("/user/submit");
+                        })
+                        .catch(function (error) {
+                            console.log(error);
                         });
 
-                    }
+                    
+
                 }
 
                 // else return res.status(200).json({

@@ -5,7 +5,7 @@ const judgementSchema = new mongoose.Schema({
     licenseID: {
         type: String,
         required: true,
-        unique: true
+        // unique: true
     },
     // createdAt: {
     //     type: Date,
@@ -48,6 +48,6 @@ const judgementSchema = new mongoose.Schema({
 //     next();
 // });
 
-const Judgement = new mongoose.model("Judgement", judgementSchema);
+const Judgement = new mongoose.model("Documents", judgementSchema);
 
 module.exports = Judgement;
