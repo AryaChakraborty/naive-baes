@@ -22,7 +22,7 @@ Router.route("/keywordSearch")
 
         let data = JSON.stringify({
             "search_key": skeys,
-            "top": 2,
+            "top": 10,
             "order_matters": false
         });
 
@@ -42,10 +42,6 @@ Router.route("/keywordSearch")
 
                 let docs = response.data["docs"];
 
-                // for ( let item of docs){
-                //     console.log(item);
-                // }
-
                 // cleanText = response.data["docs"][0].cleanText;
                 // keywords = response.data["docs"][0].keywords;
                 // url = response.data["docs"][0].documents[0].url;
@@ -60,7 +56,7 @@ Router.route("/keywordSearch")
                         "docs": docs
                     }
                 );
-                res.send(response.data["docs"])
+                // res.send(response.data["docs"])
             })
             .catch(function (error) {
                 console.log(error);

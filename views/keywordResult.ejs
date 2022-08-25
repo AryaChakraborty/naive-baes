@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/keywordResult.css">
-    <title>Predict</title>
+    <title>Result</title>
     <!-- Font awesome cdn  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
@@ -18,77 +18,39 @@
 
                 <h2>Here are your results</h2>
                 <div class="keyword-content">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos ipsum soluta, voluptatem et vel, qui,
-                    error officiis sint quidem ea nam? Sint cupiditate inventore libero harum. Sequi placeat consequatur
-                    iure ullam animi aliquid iste incidunt distinctio atque minus quos id quibusdam saepe nobis, a rerum
-                    praesentium, sunt ab eaque accusamus!
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio beatae rem reiciendis corporis
+                    tempora? Delectus provident, nemo temporibus harum aliquam libero ut debitis maxime ea laboriosam!
                 </div>
                 <div class="result-container">
-                    <div class="result-wrapper">
-                        <div class="result-text">
-                            <h3>Case No 1</h3>
-                            <div class="tag-container">
-                                <div class="tag-wrapper">Case</div>
-                                <div class="tag-wrapper">Judge</div>
-                                <div class="tag-wrapper">Divorce</div>
-                            </div>
-                            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius facere odio illum
-                                praesentium assumenda sit repellendus porro placeat soluta. Obcaecati!</p> -->
-                        </div>
-                        <div class="result-download">
-                            <a href="#">Show Details</a>
-                        </div>
-                    </div>
-                    <div class="result-wrapper">
-                        <div class="result-text">
-                            <h3>Case No 1</h3>
-                            <div class="tag-container">
-                                <div class="tag-wrapper">Case</div>
-                                <div class="tag-wrapper">Judge</div>
-                                <div class="tag-wrapper">Divorce</div>
-                            </div>
-                            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius facere odio illum
-                                praesentium assumenda sit repellendus porro placeat soluta. Obcaecati!</p> -->
-                        </div>
-                        <div class="result-download">
-                            <a href="#">Show Details</a>
-                        </div>
-                    </div>
-                    <div class="result-wrapper">
-                        <div class="result-text">
-                            <h3>Case No 1</h3>
-                            <div class="tag-container">
-                                <div class="tag-wrapper">Case</div>
-                                <div class="tag-wrapper">Judge</div>
-                                <div class="tag-wrapper">Divorce</div>
-                            </div>
-                            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius facere odio illum
-                                praesentium assumenda sit repellendus porro placeat soluta. Obcaecati!</p> -->
-                        </div>
-                        <div class="result-download">
-                            <a href="#">Show Details</a>
-                        </div>
-                    </div>
-                    <!-- <div class="result-wrapper">
-                        <div class="result-text">
-                            <h3>Case title</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius facere odio illum
-                                praesentium assumenda sit repellendus porro placeat soluta. Obcaecati!</p>
-                        </div>
-                        <div class="result-download">
-                            <a href="#">Show Details</a>
-                        </div>
-                    </div>
-                    <div class="result-wrapper">
-                        <div class="result-text">
-                            <h3>Case title</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius facere odio illum
-                                praesentium assumenda sit repellendus porro placeat soluta. Obcaecati!</p>
-                        </div>
-                        <div class="result-download">
-                            <a href="#">Show Details</a>
-                        </div>
-                    </div> -->
+                    <% if(docs.length> 0) { %>
+                        <% let i=1; %>
+                            <% for ( let item of docs ) { %>
+
+
+                                <div class="result-wrapper">
+                                    <div class="result-text">
+                                        <h3> Case - <%= i++ %>
+                                        </h3>
+                                        <p>
+                                            <%= item.cleanText.slice(0,200) %> ...
+                                        </p>
+                                        <div class="keywords">
+                                            <% for ( let keyword = 0 ; keyword < item.keywords.length ; keyword++ ) { %>
+
+                                                <div class="keyword">
+                                                    <%= console.log(item.keywords[keyword]) %>
+                                                </div>
+
+                                            <% } %>
+                                        </div>
+                                    </div>
+                                    <div class="result-download">
+                                        <a target="_blank" href=<%=item.documents[0].url %> >Show PDF</a>
+                                    </div>
+                                </div>
+                                <% } %>
+                                    <% } %>
+
                 </div>
 
 
