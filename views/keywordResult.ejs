@@ -34,11 +34,11 @@
                                         <p>
                                             <%= item.cleanText.slice(0,200) %> ...
                                         </p>
-                                        <div class="keywords">
+                                        <div class="tag-container">
                                             <% for ( let keyword = 0 ; keyword < item.keywords.length ; keyword++ ) { %>
 
-                                                <div class="keyword">
-                                                    <%= console.log(item.keywords[keyword]) %>
+                                                <div class="tag-wrapper">
+                                                    <%= item.keywords[keyword] %>
                                                 </div>
 
                                             <% } %>
