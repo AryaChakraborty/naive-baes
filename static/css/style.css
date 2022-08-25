@@ -21,6 +21,9 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 .stop-scrolling {
   height: 100%;
