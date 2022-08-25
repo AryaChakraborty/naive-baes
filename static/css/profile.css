@@ -128,7 +128,12 @@ table .td-content {
 .profile-details table tr {
   border-bottom: 1px solid #dddddd;
 }
-
+footer .copyright {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
 
 @media(max-width: 768px) {
   table .td-content {
