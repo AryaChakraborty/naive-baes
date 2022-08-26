@@ -633,6 +633,9 @@ Router.route("/keywordSearch")
     .post(async (req, res) => {
         let caseSearch = req.body.caseSearch;
         let pdfNumber = req.body.number;
+        let order = req.body.order;
+        let year = req.body.year;
+        let region = req.body.region;
 
         caseSearch = '{"key":' + caseSearch + '}'
         caseSearch = JSON.parse(caseSearch)['key'];
@@ -644,7 +647,9 @@ Router.route("/keywordSearch")
         let data = JSON.stringify({
             "search_key": skeys,
             "top": Number(pdfNumber) || 10,
-            "order_matters": false
+            "order_matters": order || true,
+            "year": year,
+            "region": region
         });
 
         let config = {
