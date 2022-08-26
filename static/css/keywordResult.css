@@ -45,13 +45,16 @@ body {
     width: 70%;
     padding: 1rem;
 }
+
 .result-container .result-wrapper{
-    background-color: rgb(224, 224, 224);
+    background-color:white;
     padding: 1rem;
     display: flex;
     flex-direction: row;
     border-radius: 5px;
     margin-bottom: 1.2rem;
+    box-shadow: 4px 3px 20px #3535358c;
+
 }
 .result-container .result-wrapper .result-text{
     display: flex;
@@ -71,13 +74,13 @@ body {
     background-color: var(--mainColor);
     border: none;
     outline: none;
-    padding: 0.5rem 1rem;
+    padding: 0.3rem 0.6rem;
     border-radius: 20px;
     color: #ffffff;
-    font-size: 14px;
+    font-size: 10px;
     font-weight: 500;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
+    margin-right: 0.6rem;
+    margin-bottom: 0.8rem;
 }
 .result-container .result-wrapper .result-download{
     display: flex;
@@ -88,11 +91,14 @@ body {
 }
 .result-text h3{
     font-size: 26px;
+    color: #3F51B5;
 }
 .result-text h4{
     font-size: 20px;
     padding-top: 1rem;
     padding-bottom: 0.5rem;
+    color: #3F51B5;
+
 }
 .result-text .readmore{
     font-size: 14px;
@@ -107,7 +113,7 @@ body {
 
 
 .result-download a{
-    background-color: var(--mainColor);
+    background-color: #3F51B5;
     border: none;
     outline: none;
     padding: 0.5rem 1rem;
@@ -117,7 +123,10 @@ body {
     font-size: 15px;
     font-weight: 600;
     text-decoration: none;
+    cursor: pointer;
 }
 .result-download a:hover{
-    background-color: var(--hoverColor);
+    transform: scale(1.02) translateY(-2px);
+    box-shadow: 3px 3px 6px #38373785;
+
 }
