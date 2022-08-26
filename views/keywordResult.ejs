@@ -31,18 +31,23 @@
                                     <div class="result-text">
                                         <h3> Case - <%= i++ %>
                                         </h3>
-                                        <p>
-                                            <%= item.cleanText.slice(0,200) %> ...
-                                        </p>
+                                        <div class="readmore">
+                                            <%= item.cleanText.slice(0,300) %>
+                                                <span class="ellipsis">...</span>
+                                                <span class="moreText">
+                                                    <%= item.cleanText.slice(301) %>
+                                                </span>
+                                                <a class="more" href="#">Read more</a>
+                                        </div>
                                         <h4>Related Keywords :</h4>
                                         <div class="tag-container">
-                                            <% for ( let keyword = 0 ; keyword < item.keywords.length ; keyword++ ) { %>
+                                            <% for ( let keyword=0 ; keyword < 10 ; keyword++ ) { %>
 
                                                 <div class="tag-wrapper">
                                                     <%= item.keywords[keyword] %>
                                                 </div>
 
-                                            <% } %>
+                                                <% } %>
                                         </div>
                                     </div>
                                     <div class="result-download">
@@ -60,7 +65,22 @@
 
     </div>
 </body>
-
-<script></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $(function () {
+        $('.readmore a.more').on('click', function () {
+            var $parent = $(this).parent();
+            if ($parent.data('visible')) {
+                $parent.data('visible', false).find('.ellipsis').show()
+                    .end().find('.moreText').hide()
+                    .end().find('a.more').text('Read more');
+            } else {
+                $parent.data('visible', true).find('.ellipsis').hide()
+                    .end().find('.moreText').show()
+                    .end().find('a.more').text('Read less');
+            }
+        });
+    });
+</script>
 
 </html>

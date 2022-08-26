@@ -94,9 +94,18 @@ body {
     padding-top: 1rem;
     padding-bottom: 0.5rem;
 }
-.result-text p{
+.result-text .readmore{
     font-size: 14px;
 }
+
+.readmore .moreText {
+    display:none;
+}
+.readmore a.more {
+    display:block;
+}
+
+
 .result-download a{
     background-color: var(--mainColor);
     border: none;
