@@ -56,24 +56,33 @@ body {
 .submit-options{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }
-
-.submit-options select{
-    background-color: var(--mainColor);
-    color: #ffffff;
-    font-size: 18px;
+details > summary {
+    width: 200px;
     border: none;
+    cursor: pointer;
+    margin: auto;
+  }
+  
+  details > p {
+    padding: 4px;
+    margin: 0;
+  }
+.submit-options select{
+    font-size: 16px;
+    border: 2px solid #64bcf4;
     outline: none;
     border-radius: 5px;
-    padding: 0.5rem 1rem;
-    width: 200px;
+    padding: 0.3rem 0.6rem;
+    width: 300px;
     cursor: pointer;
-    margin-left: 1rem;
 }
-
+.submit-options h3{
+    margin:10px;
+}
 .submit-options select option{
     background-color: #fff;
     color: #000000;
@@ -100,8 +109,8 @@ body {
 }
 
 .keyword-main h2 {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 footer .copyright {
