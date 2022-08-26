@@ -64,7 +64,8 @@ Router.route("/keywordSearch")
 
                 res.render("keywordResult.ejs",
                     {
-                        "docs": docs
+                        "docs": docs,
+                        "skeys" : skeys
                     }
                 );
             })
