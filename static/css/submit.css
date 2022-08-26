@@ -40,8 +40,7 @@ body {
 
 .submit-upload-container {
     display: flex;
-    flex-direction: row;
-    width: 40%;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding-bottom: 3rem;
@@ -53,7 +52,7 @@ body {
 } */
 
 .submit-upload form {
-    width: 100%;
+    text-align: center;
 }
 
 .submit-btn {
@@ -67,7 +66,6 @@ body {
     color: #ffffff;
     font-size: 18px;
     font-weight: 700;
-    margin-top: 20px;
 }
 
 .submit-btn:hover {
@@ -92,11 +90,11 @@ body {
 .submit-details-wrapper h2{
     padding-right: 1rem ;
 }
-/* input[type="file"] {
+input[type="file"] {
     display: none;
-} */
+}
 
-input[type="date"]{
+/* input[type="date"]{
     background-color: var(--mainColor);
     color: #ffffff;
     font-size: 18px;
@@ -111,20 +109,49 @@ input[type="date"]{
     padding: 4px;
     cursor: pointer;
     border-radius: 3px;
+} */
+
+.submit-details {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    align-items: center;
+    justify-content:center;
+    padding-bottom: 3rem;
 }
-.submit-details select{
-    background-color: var(--mainColor);
-    color: #ffffff;
+
+.submit-details-wrapper{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 3rem;
+    width: 100%;
+}
+.submit-details-wrapper h2{
+    padding-right: 1rem ;
+}
+.submit-options h3{
+    margin:10px;
+}
+.submit-options select{
     font-size: 18px;
-    border: none;
+    border: 2px solid #64bcf4;
     outline: none;
     border-radius: 5px;
     padding: 0.5rem 1rem;
     width: 200px;
     cursor: pointer;
 }
+.submit-options input[type="text"],
+.submit-options input[type="number"]{
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    width: 200px;
+    border: 2px solid #64bcf4;
 
-.submit-details select option{
+}
+
+.submit-options select option{
     background-color: #fff;
     color: #000000;
 }
@@ -143,12 +170,19 @@ input[type="date"]{
 .submit-upload label:hover {
     background-color: var(--hoverColor);
 }
-footer .copyright {
+.submit-options{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+}
+/* footer .copyright {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-}
+} */
 @media(max-width: 980px) {
     .submit-upload-container {
         width: 70%;   
