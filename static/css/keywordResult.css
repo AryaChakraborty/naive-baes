@@ -41,6 +41,30 @@ body {
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
+
+.keyword-main .search-keywords-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-weight: 600;
+    font-size: 18px ;
+    margin-bottom: 0.8rem;
+
+}
+.keyword-main .search-keywords-box .search-keywords{
+    background-color: var(--mainColor);
+    border: none;
+    outline: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 0.6rem;
+}
+
 .result-container{
     width: 70%;
     padding: 1rem;
@@ -109,6 +133,9 @@ body {
 }
 .readmore a.more {
     display:block;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
 }
 
 
