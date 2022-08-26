@@ -33,6 +33,45 @@
                     <div class="submit-upload">
                         <form action="/user/submit" name="submit-form" method="POST" enctype="multipart/form-data">
                             <input type="file" name="documents" id="documents" multiple="multiple">
+                            <div class="submit-options">
+                                <h3>Case Year :</h3>
+                                <input type="number" name="crimeYear" id="crimeYear">
+                            </div>
+                            <div class="submit-options">
+                                <h3>Select Court :</h3>
+                                <select name="crimeRegion" id="crimeRegion">
+                                    <option value="">Select Court</option>
+                                    <option value="Allahabad">Allahabad High Court</option>
+                                    <option value="Andhra">Andhra Pradesh High Court</option>
+                                    <option value="Bombay">Bombay High Court</option>
+                                    <option value="Calcutta">Calcutta High Court</option>
+                                    <option value="Chhattisgarh">Chhattisgarh High Court</option>
+                                    <option value="Delhi">Delhi High Court</option>
+                                    <option value="Gauhati">Gauhati High Court</option>
+                                    <option value="Gujarat">Gujarat High Court</option>
+                                    <option value="HimachalPradesh">Himachal Pradesh High Court</option>
+                                    <option value="JammuKashmir">Jammu & Kashmir High Court</option>
+                                    <option value="Jharkhand">Jharkhand High Court</option>
+                                    <option value="Karnataka">Karnataka High Court</option>
+                                    <option value="Kerala">Kerala High Court</option>
+                                    <option value="Madhya">Madhya Pradesh High Court</option>
+                                    <option value="Madras">Madras High Court</option>
+                                    <option value="Manipur">Manipur High Court</option>
+                                    <option value="Meghalaya">Meghalaya High Court</option>
+                                    <option value="Orissa">High Court of Orissa</option>
+                                    <option value="Patna">Patna High Court</option>
+                                    <option value="PunjabHaryana">Punjab & Haryana High Court</option>
+                                    <option value="Rajasthan">Rajasthan High Court</option>
+                                    <option value="Sikkim">Sikkim High Court</option>
+                                    <option value="Telangana">Telangana High Court</option>
+                                    <option value="Tripura">Tripura High Court</option>
+                                    <option value="Uttarakhand">Uttarakhand High Court</option>
+                        </select>
+                            </div>
+                            <div class="submit-options">
+                            <h3>Case Number :</h3>
+                            <input type="text" name="caseNumber" id="caseNumber">
+                            </div>
                             <!-- <label for="predict"><i class="fas fa-upload"></i>&nbspChoose a Photo</label> -->
                             <div class="submit-btn-wrapper"><input type="submit" value="Submit" class="submit-btn">
                             </div>
