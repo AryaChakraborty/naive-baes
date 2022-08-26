@@ -21,6 +21,16 @@
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio beatae rem reiciendis corporis
                     tempora? Delectus provident, nemo temporibus harum aliquam libero ut debitis maxime ea laboriosam!
                 </div>
+                <div class="search-keywords-box">
+                    You searched for the keywords :
+                    <% for ( let i=0 ; i < skeys.length ; i++ ) { %>
+                        <div class="search-keywords">
+
+                            <%= skeys[i] %>
+
+                        </div>
+                        <% } %>
+                </div>
                 <div class="result-container">
                     <% if(docs.length> 0) { %>
                         <% let i=1; %>
@@ -65,7 +75,9 @@
 
     </div>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
     $(function () {
         $('.readmore a.more').on('click', function () {

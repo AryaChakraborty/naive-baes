@@ -6,7 +6,8 @@ const axios = require("axios");
 Router.route("/keywordResult")
     .get(async (req, res) => {
         res.status(200).render("keywordResult.ejs"), {
-            "docs": docs
+            "docs": docs,
+            "skeys" : skeys
         };
     })
 
