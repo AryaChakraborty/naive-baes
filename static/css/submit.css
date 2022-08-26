@@ -72,24 +72,6 @@ body {
     background-color: var(--hoverColor);
 }
 
-.submit-details {
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-    align-items: center;
-    justify-content:center;
-    padding-bottom: 3rem;
-}
-
-.submit-details-wrapper{
-    display: flex;
-    flex-direction: row;
-    padding-bottom: 3rem;
-    width: 100%;
-}
-.submit-details-wrapper h2{
-    padding-right: 1rem ;
-}
 input[type="file"] {
     display: none;
 }
@@ -123,8 +105,10 @@ input[type="file"] {
 .submit-details-wrapper{
     display: flex;
     flex-direction: row;
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
     width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 .submit-details-wrapper h2{
     padding-right: 1rem ;
@@ -133,20 +117,20 @@ input[type="file"] {
     margin:10px;
 }
 .submit-options select{
-    font-size: 18px;
+    font-size: 16px;
     border: 2px solid #64bcf4;
     outline: none;
     border-radius: 5px;
-    padding: 0.5rem 1rem;
-    width: 200px;
+    padding: 0.3rem 0.6rem;
+    width: 300px;
     cursor: pointer;
 }
 .submit-options input[type="text"],
 .submit-options input[type="number"]{
-    font-size: 18px;
+    font-size: 16px;
     border-radius: 5px;
-    padding: 0.5rem 1rem;
-    width: 200px;
+    padding: 0.3rem 0.6rem;
+    width: 300px;
     border: 2px solid #64bcf4;
 
 }
@@ -159,11 +143,11 @@ input[type="file"] {
     background-color: var(--mainColor);
     border: none;
     outline: none;
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1.5rem;
     border-radius: 3px;
     transition: all 0.3s ease 0s;
     color: #ffffff;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 600;
 }
 
