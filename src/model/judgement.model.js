@@ -15,10 +15,13 @@ const judgementSchema = new mongoose.Schema({
     //     type: Date,
     //     default: Date.now
     // },
-    // crimeDate: {
-    //     type: Date
-    // },
-    crimeLocation: {
+    year: {
+        type: Number
+    },
+    caseNumber: {
+        type: String
+    },
+    region: {
         type: String
     },
     documents: [
@@ -48,6 +51,6 @@ const judgementSchema = new mongoose.Schema({
 //     next();
 // });
 
-const Judgement = new mongoose.model("Documents", judgementSchema);
+const Judgement = new mongoose.model("Upload", judgementSchema);
 
 module.exports = Judgement;

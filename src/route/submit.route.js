@@ -31,9 +31,10 @@ Router.route("/submit")
 
 
             const newJudgement = new judgement({
-                licenseID: req.body.licenseID, //* We will get this using cookies
-                crimeDate: req.body.crimeDate,
-                crimeLocation: req.body.crimeLocation,
+                licenseID: "upload", //* We will get this using cookies
+                crimeYear: req.body.crimeYear,
+                // caseNumber: req.body.caseNumber,
+                crimeRegion: req.body.crimeRegion,
                 documents: files
             });
 
