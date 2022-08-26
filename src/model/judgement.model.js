@@ -51,6 +51,6 @@ const judgementSchema = new mongoose.Schema({
 //     next();
 // });
 
-const Judgement = new mongoose.model("Upload", judgementSchema);
+const Judgement = new mongoose.model("Document", judgementSchema);
 
 module.exports = Judgement;
