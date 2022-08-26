@@ -30,6 +30,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 2rem;
+    height: 85vh;
 }
 
 .keyword-content {
@@ -113,9 +114,9 @@ details > summary {
     margin-bottom: 1rem;
 }
 
-footer .copyright {
+/* footer .copyright {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-}
+} */
