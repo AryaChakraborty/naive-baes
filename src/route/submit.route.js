@@ -31,7 +31,7 @@ Router.route("/submit")
 
 
             const newJudgement = new judgement({
-                licenseID: "upload", //* We will get this using cookies
+                licenseID: "random", //* We will get this using cookies
                 crimeYear: req.body.crimeYear,
                 // caseNumber: req.body.caseNumber,
                 crimeRegion: req.body.crimeRegion,
