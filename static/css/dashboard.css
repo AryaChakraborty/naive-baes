@@ -134,7 +134,7 @@ a, a:hover, a:focus, a:active {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 60%;
+    /* width: 60%; */
     padding-top: 2rem;
 }
 .cta-box .cta-btn {
@@ -149,6 +149,7 @@ a, a:hover, a:focus, a:active {
     border-radius: 30px;
     text-transform: capitalize;
     transition: 0.3s;
+    margin: 0 2rem;
 }
 .cta-box .cta-btn:hover {
     background-color: var(--hoverColor);
@@ -198,6 +199,13 @@ a, a:hover, a:focus, a:active {
     animation: fadeIn 0.7s, hideAnimation 0s ease-in 3s;
     animation-fill-mode: forwards;
 }
+
+footer .copyright {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
 
 @keyframes fadeIn {
     from {
